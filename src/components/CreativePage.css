@@ -218,7 +218,7 @@ body {
 
 .div3 li {
   cursor: pointer;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
   transition: color 0.3s ease;
   animation: rotateIn 1s ease-in-out;
 }
