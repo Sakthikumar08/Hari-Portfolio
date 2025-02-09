@@ -12,7 +12,7 @@ const Navbar = () => {
     {/* Navigation items on the right */}
     <div className="nav-items">
       <NavLink to="/" className="nav-item">Home</NavLink>
-      <NavLink to="/about" className="nav-item">Home</NavLink>
+      <NavLink to="/about" className="nav-item">About</NavLink>
       <NavLink to="/project" className="nav-item">Project</NavLink>
       <NavLink to="/blog" className="nav-item">Blog</NavLink>
 
