@@ -108,7 +108,7 @@ const CreativePage = () => {
             className="hero-image" 
             style={{ display: "block", margin: "0 auto" }} 
           />
-          <p>
+          <p style={{ marginTop: '18px' }}>
             Unleash your full learning potential with Bodhi, where the pursuit of knowledge meets effortless discovery. Say goodbye to the search struggle and hello to tailored, top-notch tutoring, right at your fingertips. Welcome to a smarter way to excel academically.
           </p>
       
@@ -118,7 +118,7 @@ const CreativePage = () => {
         <div className="div2">
           <div ref={(el) => (sectionRefs.current["Why I Started This Project"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Why I Started This Project</h2>
-            <p>
+            <p className="content-p">
             I embarked on the journey of creating tutor finding app driven by a profound concern for the educational challenges
 that many rural students encounter. Witnessing their determination to excel academically despite the scarcity of
 proper guidance deeply inspired me. This endeavor is rooted in the belief that every student, regardless of their
@@ -135,7 +135,7 @@ win-win scenario.
 
           <div ref={(el) => (sectionRefs.current["Project Overview"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Project Overview</h2>
-            <p>
+            <p className="content-p">
             Finding tutor is a very common problem in our country. Students are
 struggling to get tutor who can accommodate the student’s schedule
 and finding a tutor with expertise in a specific subject or topic, 
@@ -160,16 +160,16 @@ User Interface design of the app here.
           <div ref={(el) => (sectionRefs.current["Problem Statement"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Problem Statement</h2>
             <ul>
-      <li style={{ marginBottom: '10px' }}>Limited Tutor Options: Without a tutor finding app, rural students may have fewer options when it comes to selecting a tutor with expertise in specific subjects or topics.</li>
-      <li style={{ marginBottom: '10px' }}>Travel Constraints: Travelling to urban areas for tutoring sessions can be time-consuming and expensive.</li>
-      <li style={{ marginBottom: '10px' }}>Lack of Reviews and Ratings: Without an app, students may lack access to reviews and ratings from previous students, making it challenging to assess a tutor’s quality.</li>
-      <li style={{ marginBottom: '10px' }}>Payment Disputes: Billing issues or disputes over fees can create tension between students and tutors, affecting the overall experience.</li>
-      <li style={{ marginBottom: '10px' }}>Subject Availability: In some cases, students may struggle to find tutors for niche areas in subjects or specialized areas of study.</li>
-      <li style={{ marginBottom: '10px' }}>Geographical Isolation: Rural communities are often spread out, making it difficult for students to find tutors who are within a reasonable distance for in-person sessions.</li>
-      <li style={{ marginBottom: '10px' }}>Language Barriers: Rural areas may have diverse linguistic backgrounds, which can create language barriers when accessing online tutoring platforms.</li>
-      <li style={{ marginBottom: '10px' }}>Difficulty in Homework Assistance: Rural students may struggle with homework and assignments, as there may not be readily available resources or tutors to help them.</li>
-      <li style={{ marginBottom: '10px' }}>Educational Inequality: The lack of access to educational resources, including tutor finding apps, can contribute to educational inequality between rural and urban students.</li>
-      <li style={{ marginBottom: '10px' }}>Progress Tracker: Students' progress is not known during tuition.</li>
+      <li >Limited Tutor Options: Without a tutor finding app, rural students may have fewer options when it comes to selecting a tutor with expertise in specific subjects or topics.</li>
+      <li >Travel Constraints: Travelling to urban areas for tutoring sessions can be time-consuming and expensive.</li>
+      <li >Lack of Reviews and Ratings: Without an app, students may lack access to reviews and ratings from previous students, making it challenging to assess a tutor’s quality.</li>
+      <li >Payment Disputes: Billing issues or disputes over fees can create tension between students and tutors, affecting the overall experience.</li>
+      <li >Subject Availability: In some cases, students may struggle to find tutors for niche areas in subjects or specialized areas of study.</li>
+      <li >Geographical Isolation: Rural communities are often spread out, making it difficult for students to find tutors who are within a reasonable distance for in-person sessions.</li>
+      <li >Language Barriers: Rural areas may have diverse linguistic backgrounds, which can create language barriers when accessing online tutoring platforms.</li>
+      <li >Difficulty in Homework Assistance: Rural students may struggle with homework and assignments, as there may not be readily available resources or tutors to help them.</li>
+      <li >Educational Inequality: The lack of access to educational resources, including tutor finding apps, can contribute to educational inequality between rural and urban students.</li>
+      <li >Progress Tracker: Students' progress is not known during tuition.</li>
     </ul>
 <img 
   src={bodhi5} 
@@ -183,34 +183,34 @@ User Interface design of the app here.
           <div ref={(el) => (sectionRefs.current["Possible Solution"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Possible Solution</h2>
             <ul>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         Creating a convenient digital platform for finding tuition.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         Integrating a progress tracker into my app which facilitates better communication between students and tutors, and provides a structured approach to tracking educational progress.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         Offer support for local languages and dialects within the app to make it accessible to students who may not be proficient in the national language.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         Develop offline resource libraries within the app, including educational materials, practice tests, and study guides, that rural students can access without an internet connection.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         Integrating a payment tracker into my app which facilitates sending notifications for upcoming payments, making it convenient for users to manage their financial commitments.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         To get an instant solution to any problem by talking to the teacher through message, voice, or video call.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         Implement an offline mode in the app, allowing students to download educational resources, practice tests, and study guides and access them offline in remote areas.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         Optimize the app to function efficiently on low-bandwidth connections, ensuring that rural students can use it even with limited internet speeds.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         To find nearby teachers easily.
       </li>
-      <li style={{ marginBottom: '10px' }}>
+      <li >
         To get to know about the teaching style of the tutor by providing a demo class to students.
       </li>
     </ul>
@@ -352,10 +352,10 @@ User Interface design of the app here.
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">User Journey Map</h2>
 
             <h3>Priya's Board Exam Preparation</h3>
-      <p><strong>Name:</strong> Priya</p>
-      <p><strong>Age:</strong> 16</p>
-      <p><strong>Background:</strong> Priya lives in a remote village in Tamilnadu and is currently preparing for her 12th-grade board exams.</p>
-      <p><strong>Scenario:</strong> Priya’s Board Exam Preparation</p>
+      <p style={{ letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)"}}><strong  style={{color:"white"}}>Name:</strong> Priya</p>
+      <p style={{letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)"}} ><strong style={{color:"white"}}>Age:</strong> 16</p>
+      <p style={{letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)"}} ><strong style={{color:"white"}}>Background:</strong> Priya lives in a remote village in Tamilnadu and is currently preparing for her 12th-grade board exams.</p>
+      <p style={{letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)",marginBottom:"15px"}} ><strong style={{color:"white"}}>Scenario:</strong> Priya’s Board Exam Preparation</p>
        
             <img 
   src={bodhi20} 
@@ -365,10 +365,10 @@ User Interface design of the app here.
 />
 
 <h3>Subathra's Board Exam Preparation Struggles</h3>
-      <p><strong>Name:</strong> Subathra</p>
-      <p><strong>Age:</strong> 16</p>
-      <p><strong>Background:</strong> Subathra lives in a remote village in Tamilnadu and is currently preparing for her 12th-grade board exams.</p>
-      <p><strong>Scenario:</strong> Subathra’s Board Exam Preparation Struggles</p>
+      <p style={{letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)"}} ><strong style={{color:"white"}}>Name:</strong> Subathra</p>
+      <p style={{letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)"}} ><strong style={{color:"white"}}>Age:</strong> 16</p>
+      <p style={{letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)"}} ><strong style={{color:"white"}}>Background:</strong> Subathra lives in a remote village in Tamilnadu and is currently preparing for her 12th-grade board exams.</p>
+      <p style={{letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)",marginBottom:"15px"}} ><strong style={{color:"white"}}>Scenario:</strong> Subathra’s Board Exam Preparation Struggles</p>
 
       <img 
   src={bodhi21} 
