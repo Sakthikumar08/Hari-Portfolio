@@ -207,6 +207,7 @@ body {
 }
 
 /* Portfolio container */
+/* Portfolio container */
 .portfolio-container {
     background-color: var(--bgcolor);
     color: white;
@@ -255,12 +256,16 @@ body {
 }
 
 /* Zigzag effect */
-.portfolio-card:nth-child(odd) {
-    margin-left: 0; /* Align odd cards to the left */
+.portfolio-card:nth-child(even) {
+    margin-left: 0;
+    margin-top:-300px;
+    /* Align odd cards to the left */
 }
 
-.portfolio-card:nth-child(even) {
-    margin-left: 50px; /* Indent even cards to create zigzag */
+.portfolio-card:nth-child(odd) {
+    margin-left: 500px; 
+    margin-top:-100px;
+    /* Indent even cards to create zigzag */
 }
 
 /* Project image */
@@ -308,7 +313,6 @@ body {
     font-size: 1rem;
     color: #aaa;
 }
-
 /* latest- article section */
 .articles-container {
     background-color: var(--bgcolor);

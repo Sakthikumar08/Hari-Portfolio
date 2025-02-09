@@ -36,6 +36,22 @@ const Home = () => {
           tech: ["Figma", "Framer"],
           link: "/creative"
         },
+        {
+         title: "project2",
+            image: require("../assets/bodhi.png"), 
+            description:
+              "A web app to analyze whether an opinion on a specific topic is positive or negative based on recent tweets using Natural Language Processing.",
+            tech: ["Figma", "Framer"],
+            link: "/creative"
+          },{
+            title: "project3",
+               image: require("../assets/bodhi.png"), 
+               description:
+                 "A web app to analyze whether an opinion on a specific topic is positive or negative based on recent tweets using Natural Language Processing.",
+               tech: ["Figma", "Framer"],
+               link: "/creative"
+             },
+          
     ];
 
     // Animation variants
