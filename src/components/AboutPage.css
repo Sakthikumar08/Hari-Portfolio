@@ -1,0 +1,194 @@
+.skills-container {
+
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .skills-title {
+    font-size: 44px;
+    margin-bottom: 15px;
+    font-weight: 1000;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-tag {
+    background-color: none;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .more-btn {
+    cursor: pointer;
+    background-color: none;
+  }
+  .experience-section {
+    margin-top: 70px;
+  }
+  
+  .experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 0;
+  }
+  
+  .experience-role {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .experience-company {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .experience-duration {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .tech-icons-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 30px;
+    
+  }
+  
+  .tech-icons-scroll {
+    display: flex;
+    gap: 20px;
+    animation: scrollLeft 15s linear infinite;
+    width: max-content;
+  }
+  
+  .tech-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 12px;
+    padding: 10px;
+    background: black;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tech-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .projects-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-card {
+    position: absolute;
+    width: 80%;
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(to right, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.8));
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  }
+  
+  .project-content {
+    max-width: 50%;
+  }
+  
+  .project-image {
+    max-width: 40%;
+    border-radius: 12px;
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    pointer-events: none;
+  }
+  
+  .active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+  }
+  
+  .thank-you-box {
+    margin-top: 10px;
+    background: #2b3a47;
+    color: white;
+    padding: 40px 60px;
+    text-align: center;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .thank-you-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .thank-you-box p {
+    font-size: 18px;
+  }
+  
+  .thank-you-box a {
+    color: #b8c7d9;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .thank-you-box:hover {
+    background: #3d4f5c;
+    transform: scale(1.05);
+  }
+  .download-btn {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4caf50;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .download-btn:hover {
+    background: #45a049;
+  }
