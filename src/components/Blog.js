@@ -60,6 +60,7 @@ function Blog() {
       
         <input
           type="text"
+          className="blog-search"
           placeholder="Search articles"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
