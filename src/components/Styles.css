@@ -188,9 +188,32 @@ body {
     line-height: 1.7;
 }
 
-.about-text p span {
+.tooltip {
+    position: absolute;
+    max-width: 250px;
+    background-color: #222;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #00ff99;
+    font-size: 14px;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    z-index: 10;
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.tooltip-trigger {
+    position: relative;
+    cursor: pointer;
+   
     color: var(--sptext);
 }
+
+
 
 .about-image {
     display: flex;
@@ -273,15 +296,17 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px ;
+    margin-bottom: 8px;
 }
 
 /* Project title */
 .portfolio-card-title {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    
 }
 
 /* Tech stack badges */
@@ -289,14 +314,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    margin-bottom: 10px;
+   
+    padding-bottom: 10px;
+    border-bottom: 0.8px solid rgb(88, 88, 88);
 }
 
 .portfolio-tech {
     background-color: var(--tech-bg);
     border-radius: 5px;
     padding: 4px 8px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--tech-text);
     border: 1px solid var(--tech-text);
     transition: background-color 0.3s ease, color 0.3s ease;
