@@ -1,0 +1,100 @@
+.reference-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .reference-content {
+    max-width: 60%;
+  }
+  
+  .reference-heading {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .reference-intro,
+  .reference-history,
+  .reference-hobbies {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .reference-heading::before {
+    content: "⚡";
+    margin-right: 10px;
+  }
+  
+  .highlight-no-code {
+    position: relative;
+    cursor: pointer;
+    color: cyan;
+    font-weight: bold;
+  }
+  
+  .highlight-no-code::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .highlight-no-code:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .highlight-recruitment {
+    color: deepskyblue;
+    font-weight: bold;
+  }
+  
+  .highlight-saas {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .highlight-web {
+    color: limegreen;
+    font-weight: bold;
+  }
+  
+  .highlight-open-source {
+    color: lightgreen;
+    font-weight: bold;
+  }
+  
+  .highlight-competitive {
+    color: yellow;
+    font-weight: bold;
+  }
+  
+  .reference-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-picture {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  }
+  

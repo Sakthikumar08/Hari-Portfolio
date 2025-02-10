@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 import "./AboutPage.css";
+import Reference from "./Reference";
 
 
 const About = () => {
@@ -45,7 +46,7 @@ const About = () => {
     },
   ];
   const handleDownload = () => {
-    window.open("/resume.pdf", "_blank");
+    window.open("https://drive.google.com/file/d/1-k1eAakCr_6EJTQHYoLJEfgyXiur8GcN/view?usp=drive_link", "_blank");
   };
   
   const icons = [
@@ -57,7 +58,7 @@ const About = () => {
     { src: "https://framerusercontent.com/images/4S3jy7RUc36K4vCFKUPh2LY9qK0.png", alt: "Figma" },
     { src: "https://framerusercontent.com/images/l3L1wNlg26qsR2gchTV8sBvyOt4.png", alt: "CSS" },
   ];
-  const frames = [
+  const projectFrames = [
     {
       title: "Tutor App: Empowering Learning, Anytime, Anywhere",
       description:
@@ -78,23 +79,24 @@ const About = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % frames.length);
-    }, 4000); // Change frame every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [frames.length]);
-
+  const handleNextProject = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % projectFrames.length);
+  };
   return (
     <div className="skills-container">
+
+    <Reference />
     
-
-
-
-
+      <div className="tech-icons-container">
+      <div className="tech-icons-scroll">
+        {/* Duplicating icons for seamless infinite scrolling */}
+        {[...icons, ...icons].map((icon, index) => (
+          <img key={index} src={icon.src} alt={icon.alt} className="tech-icon" />
+        ))}
+      </div>
+    </div>
       {/* Skills Section */}
       <h2 className="skills-title">Skills</h2>
       <div className="skills-list">
@@ -115,20 +117,19 @@ const About = () => {
           </div>
         ))}
       </div>
-   <div className="frames-container">
-      {frames.map((frame, index) => (
-        <div
-          key={index}
-          className={`frame-card ${index === activeIndex ? "active" : "hidden"}`}
-        >
-          <div className="frame-content">
-            <h2>{frame.title}</h2>
-            <p>{frame.description}</p>
-          </div>
-          <img src={frame.image} alt={frame.title} className="frame-image" />
+      <div className="frame-container">
+      <div className="frame-card" onClick={handleNextProject}>
+        <div className="frame-content">
+          <h2>{projectFrames[currentIndex].title}</h2>
+          <p>{projectFrames[currentIndex].description}</p>
         </div>
-      ))}
-    </div> 
+        <img
+          src={projectFrames[currentIndex].image}
+          alt={projectFrames[currentIndex].title}
+          className="frame-image"
+        />
+      </div>
+    </div>
       {/* Thank You Section */}
       <div className="thank-you-container">
         <div className="thank-you-box">
