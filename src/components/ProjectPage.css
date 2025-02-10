@@ -102,7 +102,7 @@
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .project-card:hover {
@@ -112,7 +112,7 @@
 /* Project Image */
 .project-image {
     width: 100%;
-    height: auto;
+    height:210px;
     object-fit: cover;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -159,27 +159,53 @@
     border-bottom: 1px solid grey;
 }
 
+
+
 .project-tech {
-    background-color: #252525;
-    border-radius: 5px;
-    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 12px;
     font-size: 0.8rem;
-    color: var(--tech-text);
-    border: 1px solid var(--tech-text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.project-tech:hover {
-    background-color: var(--tech-text);
-    color: var(--tech-bg);
-    cursor: pointer;
+/* Figma Button - Orange */
+.project-tech.figma {
+    background-color: #3c2721;
+    color: #e58a6e;
+    border: none;
 }
+
+.project-tech.figma i {
+    font-size: 1.2rem;
+    color: #e58a6e;
+}
+
+/* Framer Button - Yellow */
+.project-tech.framer {
+    background-color: #3d3926;
+    color: #dec979;
+    border: none;
+}
+
+.project-tech.framer i {
+    font-size: 1.2rem;
+    color: #dec979;
+}
+
+
+
+
 
 /* Project Description */
 .project-description {
     font-size: 1rem;
     color: #aaa;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     margin-left: 10px;
     margin-right: 10px;
 }

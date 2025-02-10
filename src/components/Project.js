@@ -11,19 +11,19 @@ const projects = [
     link: "/creative",
   },
   {
-    title: "AI Resume Craft",
-    image: require("../assets/bodhi.png"),
+    title: "IRCTC Platform",
+    image: require("../assets/irctc.PNG"),
     description:
-      "An AI-powered resume builder that generates professional resumes with real-time preview, ATS optimization, and job tracking.",
-    tech: ["Next.js", "TailwindCSS", "MongoDB"],
-    link: "/resume",
+      "Review of the app to highlight the mismatches and present probable solutions, along with new features.",
+    tech: ["Figma", "Framer"],
+    link: "/IRCTC",
   },
   {
     title: "Spotlight on Sports",
     image: require("../assets/bodhi.png"),
     description:
       "A sports portal featuring player stats, post-match results, and scorecards for various college sports.",
-    tech: ["React", "MySQL", "Express.js"],
+    tech: ["Figma", "Framer"],
     link: "/sports",
   },
 ];
@@ -71,7 +71,14 @@ const Project = () => {
               </div>
               <div className="project-tech-stack">
                 {project.tech.map((tech, idx) => (
-                  <span key={idx} className="project-tech">{tech}</span>
+                  <span
+                    key={idx}
+                    className={`project-tech ${tech.toLowerCase()}`} // Dynamic class for styling
+                  >
+                    {tech === "Figma" && <i className="fa-brands fa-figma"></i>}
+                    {tech === "Framer" && <i className="fa-brands fa-react"></i>} {/* Using React icon */}
+                    {tech}
+                  </span>
                 ))}
               </div>
               <p className="project-description">{project.description}</p>
