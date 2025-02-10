@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from "react";
 import { motion } from 'framer-motion';
 import "./Styles.css";
 import profile from "../assets/image.avif";
@@ -53,6 +53,23 @@ const Home = () => {
              },
           
     ];
+
+    const [tooltip, setTooltip] = useState({ text: "",  x: 0, y: 0,visible: false });
+
+    const handleMouseEnter = (e, text) => {
+      const rect = e.target.getBoundingClientRect();
+      setTooltip({
+        text,
+        x: rect.left + window.scrollX +150, // Align tooltip with the hovered element
+        y: rect.top + window.scrollY -10 ,
+        visible: true,
+      });
+    };
+  
+    const handleMouseLeave = () => {
+      setTooltip({ ...tooltip, visible: false });
+    };
+  
 
     // Animation variants
     const containerVariants = {
@@ -118,17 +135,77 @@ const Home = () => {
                 >
                     <h2 className="about-title">⚡ About Me</h2>
                     <div className="about-content">
-                        <div className="about-text">
-                            <p>
-                                Hey! I'm <span>Hari Baskar</span>, a <span>UX/UI expert</span> who has always been passionate about creating seamless and intuitive digital experiences. From the start of my career, I've been driven by a love for <span>thoughtful design</span> and <span>flawless execution</span>. My focus is on blending <span>creativity</span> and <span>precision</span> to craft designs that are not only visually stunning but also highly functional.
-                            </p>
-                            <p>
-                                When I'm not immersed in design, I love exploring new trends in the <span>tech world</span> and pushing the boundaries of what can be achieved with design. Whether it's solving <span>user problems</span> or creating a <span>memorable experience</span>, I'm all about making <span>digital spaces</span> better.
-                            </p>
-                            <p>
-                                In my free time, I enjoy unwinding with <span>games</span>, watching a good <span>show</span>, or hitting the <span>basketball court</span> for a game with friends! 🏀
-                            </p>
-                        </div>
+                    <div className="about-text">
+      <p>
+        Hey! I'm Hari Baskar, a
+        <span
+          className="tooltip-trigger"
+          onMouseEnter={(e) => handleMouseEnter(e, "Designing intuitive digital experiences with a blend of creativity.")}
+          onMouseLeave={handleMouseLeave}
+        >
+          Creative Design Expert
+        </span>{" "}
+        with a passion for crafting
+        <span
+          className="tooltip-trigger"
+          onMouseEnter={(e) => handleMouseEnter(e, "Placing users at the heart of design to create meaningful.")}
+          onMouseLeave={handleMouseLeave}
+        >
+          user-centric experiences
+        </span>. From the beginning of my career, I have been dedicated to
+        <span
+          className="tooltip-trigger"
+          onMouseEnter={(e) => handleMouseEnter(e, "Focusing on intuitive and user-friendly design principles.")}
+          onMouseLeave={handleMouseLeave}
+        >
+          intuitive design
+        </span>
+        and
+        <span
+          className="tooltip-trigger"
+          onMouseEnter={(e) => handleMouseEnter(e, "Ensuring smooth and efficient digital experiences.")}
+          onMouseLeave={handleMouseLeave}
+        >
+          seamless functionality
+        </span>.
+      </p>
+      <p>
+        When I'm not designing, I love exploring the latest in
+        <span
+          className="tooltip-trigger"
+          onMouseEnter={(e) => handleMouseEnter(e, "Keeping up with the evolving trends in UI/UX design.")}
+          onMouseLeave={handleMouseLeave}
+        >
+          UI/UX trends
+        </span>
+        and discovering new ways to enhance
+        <span
+          className="tooltip-trigger"
+          onMouseEnter={(e) => handleMouseEnter(e, "Improving and optimizing digital interactions for users.")}
+          onMouseLeave={handleMouseLeave}
+        >
+          digital interactions
+        </span>. Whether it's refining user journeys or building
+        <span
+          className="tooltip-trigger"
+          onMouseEnter={(e) => handleMouseEnter(e, "Creating visually appealing and interactive interfaces.")}
+          onMouseLeave={handleMouseLeave}
+        >
+          engaging interfaces
+        </span>, I am committed to pushing the boundaries of design excellence.
+Expertise extends to Frontend-Development enabling me to create both aesthetically pleasing and easily implementable. Currently works as UI/UX Designer at INAT Technologies Private Limited
+
+
+      </p>
+      <p>
+        Outside of work, I enjoy playing games, watching an exciting series, or stepping onto the basketball court for a match with friends! 🏀
+      </p>
+      {tooltip.visible && (
+        <div className="tooltip" style={{ left: tooltip.x, top: tooltip.y, maxWidth: "250px", whiteSpace: "normal" }}>
+          {tooltip.text}
+        </div>
+      )}
+    </div>
                         <div className="about-image">
                             <img src={profile} alt="Hari Baskar" />
                         </div>
@@ -167,7 +244,8 @@ const Home = () => {
                                     alt={project.title}
                                     className="portfolio-image"
                                 />
-                                <h3 className="portfolio-card-title">{project.title}</h3>
+                                 <h3 className="portfolio-card-title">{project.title}</h3>
+        
                                 <div className="portfolio-tech-stack">
                                     {project.tech.map((tech, idx) => (
                                         <span key={idx} className="portfolio-tech">{tech}</span>
