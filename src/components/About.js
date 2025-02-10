@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AboutPage.css";
-import ParticlesBackground from "./ParticlesBackground"; // Import the particle component
+
 
 const About = () => {
   const skills = [
@@ -34,60 +34,74 @@ const About = () => {
       duration: "Dec 2019 - Dec 2021",
     },
   ];
-
-  const projects = [
+  const handleDownload = () => {
+    window.open("/resume.pdf", "_blank");
+  };
+  
+  const icons = [
+    
+    { src: "https://framerusercontent.com/images/CtawTrUQ7exjArnxRI2z0j5lipQ.png", alt: "Html" },
+    { src: "https://framerusercontent.com/images/0ttqcWxFoLG4q71tGnY1jF6D3I.png", alt: "Adobe XD" },
+    { src: "https://framerusercontent.com/images/8lvtN5VohbrIXBQfcwrGaZPFIXs.png", alt: "Adobe Illustrator" },
+    { src: "https://framerusercontent.com/images/3udJkAAp1ehyY43IRAVyxValE9I.png", alt: "Adobe Photoshop" },
+    { src: "https://framerusercontent.com/images/4S3jy7RUc36K4vCFKUPh2LY9qK0.png", alt: "Figma" },
+    { src: "https://framerusercontent.com/images/l3L1wNlg26qsR2gchTV8sBvyOt4.png", alt: "CSS" },
+  ];
+  const frames = [
     {
       title: "Tutor App: Empowering Learning, Anytime, Anywhere",
       description:
-        "The Tutor App is a comprehensive platform designed to connect students and tutors seamlessly...",
+        "The Tutor App is a comprehensive platform designed to connect students and tutors seamlessly. It offers a user-friendly interface for scheduling, attending, and managing tutoring sessions. Whether it's academic subjects, skill-based learning, or test preparation, the app provides tailored solutions to meet diverse learning needs.",
       image: "https://framerusercontent.com/images/TCPeAZObpHshqcExOUJlnxgSM.png",
     },
     {
       title: "Share Ride App: Smarter, Greener, and Convenient Rides",
       description:
-        "The Share Ride App is a user-friendly platform designed to connect people traveling...",
+        "The Share Ride App is a user-friendly platform designed to connect people traveling in the same direction, making commuting more affordable and eco-friendly. Whether you're heading to work, college, or a long-distance journey, this app makes ride-sharing seamless.",
       image: "https://framerusercontent.com/images/ppXLZMuMRfFcDkaV7R6EEwYFtw.png",
     },
     {
       title: "IRCTC Platform: Simplifying Railway Travel in India",
       description:
-        "The IRCTC (Indian Railway Catering and Tourism Corporation) platform is India's official gateway...",
+        "The IRCTC (Indian Railway Catering and Tourism Corporation) platform is India's official gateway for booking train tickets, catering services, and tourism packages. Designed to handle millions of users daily, it provides a seamless railway booking experience.",
       image: "https://framerusercontent.com/images/RiTU9qf3PRWgOcVHeGxgRtWvgLY.png",
     },
   ];
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % projects.length);
-    }, 4000);
-  
+      setActiveIndex((prevIndex) => (prevIndex + 1) % frames.length);
+    }, 4000); // Change frame every 4 seconds
+
     return () => clearInterval(interval);
-  }, [projects.length]);
+  }, [frames.length]);
 
   return (
     <div className="skills-container">
-      {/* Background Particles */}
-      <ParticlesBackground />
-
-      {/* Download Resume Button */}
-      <button className="download-btn" onClick={() => window.open("HARI BASKAR.pdf", "_blank")}>
-        Download Resume
-      </button>
-
-      {/* Projects Section */}
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <div key={index} className={`project-card ${index === activeIndex ? "active" : "hidden"}`}>
-            <div className="project-content">
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-            </div>
-            <img src={project.image} alt={project.title} className="project-image" />
+      <div className="frames-container">
+      {frames.map((frame, index) => (
+        <div
+          key={index}
+          className={`frame-card ${index === activeIndex ? "active" : "hidden"}`}
+        >
+          <div className="frame-content">
+            <h2>{frame.title}</h2>
+            <p>{frame.description}</p>
           </div>
+          <img src={frame.image} alt={frame.title} className="frame-image" />
+        </div>
+      ))}
+    </div>
+      <div className="tech-icons-container">
+      <div className="tech-icons-scroll">
+        {/* Duplicating icons for seamless infinite scrolling */}
+        {[...icons, ...icons].map((icon, index) => (
+          <img key={index} src={icon.src} alt={icon.alt} className="tech-icon" />
         ))}
       </div>
-
+    </div>
       {/* Skills Section */}
       <h2 className="skills-title">Skills</h2>
       <div className="skills-list">
@@ -119,6 +133,11 @@ const About = () => {
           </p>
         </div>
       </div>
+      <footer className="footer-container">
+  <button className="download-btn" onClick={handleDownload}>
+    Download Resume
+  </button>
+</footer>
     </div>
   );
 };
