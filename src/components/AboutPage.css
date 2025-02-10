@@ -16,6 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  text-align: center;
 }
 
 .skill-tag {
@@ -29,17 +30,17 @@
 }
 .skill-tag:hover{
   transform: scale(1.02);
-  color: green;
+  color: var(--sptext);
   cursor: pointer;
-}
-.more-btn {
-  cursor: pointer;
-  background-color: none;
 }
 .experience-section {
   margin-top: 70px;
 }
-
+.experience-title{
+  font-weight: 1000;
+  font-size: 44px;
+  margin-bottom: 15px;
+}
 .experience-item {
   display: flex;
   justify-content: space-between;
@@ -190,7 +191,7 @@
 }
 
 .download-btn {
-  background: #4caf50;
+  background: var(--sptext);
   color: white;
   padding: 12px 18px;
   border: none;
@@ -201,6 +202,7 @@
 }
 
 .download-btn:hover {
-  background: #45a049;
+  background: var(--sptext);
   transform: scale(1.05);
 }
+
