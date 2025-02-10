@@ -6,6 +6,7 @@ import Project from "./components/Project";
 import Blog from "./components/Blog";
 import Creative from "./components/Creative";
 import About from "./components/About";
+import Irctc from "./components/Irctc";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
             <Route path="/project" element={<Project />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/creative" element={<Creative />} />
+            <Route path="/IRCTC" element={<Irctc />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </div>

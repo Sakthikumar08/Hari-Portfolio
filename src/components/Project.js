@@ -11,12 +11,12 @@ const projects = [
     link: "/creative",
   },
   {
-    title: "AI Resume Craft",
-    image: require("../assets/bodhi.png"),
+    title: "IRCTC Platform",
+    image: require("../assets/irctc.PNG"),
     description:
-      "An AI-powered resume builder that generates professional resumes with real-time preview, ATS optimization, and job tracking.",
-    tech: ["Next.js", "TailwindCSS", "MongoDB"],
-    link: "/resume",
+      "Review of the app to highlight the mismatches and present probable solutions, along with new features.",
+    tech: ["Figma", "Website"],
+    link: "/IRCTC",
   },
   {
     title: "Spotlight on Sports",
