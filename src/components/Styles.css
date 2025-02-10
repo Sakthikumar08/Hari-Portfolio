@@ -63,13 +63,13 @@ body {
 
 .nav-items {
     display: flex;
-    gap: 18px;
+    gap: 7px;
 }
 
 .nav-item {
     color: var(--white);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     padding: 10px;
     border: none;
@@ -78,6 +78,7 @@ body {
 
 .nav-item:hover {
     background-color: #202020;
+    border-radius: 5px;
 }
 
 /* Base styles */
@@ -468,3 +469,14 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 }
+.dotted-background {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 20%);
+    background-size: 10px 10px;
+    z-index: -1;
+  }
+  

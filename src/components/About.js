@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
 import "./AboutPage.css";
 
 
 const About = () => {
+  
   const skills = [
     "UI/UX Design",
     "Mobile App Design",
@@ -13,10 +15,18 @@ const About = () => {
     "Adobe XD",
     "Sketch",
     "Figma",
-    "HTML/CSS"
+    "HTML/CSS",
+    "Workshops",
+    "Leadership",
+    "Mentoring",
+    "Design Sprint",
+    "No-Code",
+    "Usability Testing",
+    "User Testing",
+    "Front-End Development",
   ];
 
-  const [showAll, setShowAll] = useState(false);
+  ;
   const experiences = [
     {
       role: "UX / UI Designer",
@@ -47,7 +57,7 @@ const About = () => {
     { src: "https://framerusercontent.com/images/4S3jy7RUc36K4vCFKUPh2LY9qK0.png", alt: "Figma" },
     { src: "https://framerusercontent.com/images/l3L1wNlg26qsR2gchTV8sBvyOt4.png", alt: "CSS" },
   ];
-  const frames = [
+  /*const frames = [
     {
       title: "Tutor App: Empowering Learning, Anytime, Anywhere",
       description:
@@ -77,10 +87,10 @@ const About = () => {
 
     return () => clearInterval(interval);
   }, [frames.length]);
-
+*/
   return (
     <div className="skills-container">
-      <div className="frames-container">
+     {/* <div className="frames-container">
       {frames.map((frame, index) => (
         <div
           key={index}
@@ -93,27 +103,23 @@ const About = () => {
           <img src={frame.image} alt={frame.title} className="frame-image" />
         </div>
       ))}
-    </div>
-      <div className="tech-icons-container">
-      <div className="tech-icons-scroll">
-        {/* Duplicating icons for seamless infinite scrolling */}
-        {[...icons, ...icons].map((icon, index) => (
-          <img key={index} src={icon.src} alt={icon.alt} className="tech-icon" />
-        ))}
-      </div>
-    </div>
+    </div> */ }
+
+
+
+
       {/* Skills Section */}
       <h2 className="skills-title">Skills</h2>
       <div className="skills-list">
-        {skills.slice(0, showAll ? skills.length : 10).map((skill, index) => (
+        {skills.map((skill, index) => (
           <div key={index} className="skill-tag">{skill}</div>
         ))}
-        {!showAll && <button className="skill-tag more-btn" onClick={() => setShowAll(true)}>+ More</button>}
+       
       </div>
 
       {/* Experience Section */}
       <div className="experience-section">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="experience-title">Experience</h2>
         {experiences.map((exp, index) => (
           <div key={index} className="experience-item">
             <div className="experience-role">{exp.role}</div>
