@@ -68,8 +68,7 @@
   white-space: nowrap;
   width: 100%;
   padding: 20px 0;
-  margin-top: 30px;
-  
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
 }
 
 .tech-icons-scroll {
@@ -101,13 +100,15 @@
   }
 }
 
+
+
 .frame-container {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 450px; /* Adjust for better visibility */
+  height: 250px; /* Adjust as needed */
   padding: 20px;
 }
 
@@ -143,6 +144,26 @@
   transform: scale(0.98);
 }
 
+/* Animation for Auto-Switching */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.frame-card {
+  animation: fadeIn 1s ease-in-out;
+}
+.frame-title{
+  font-size: 44px;
+  margin-top: 35px;
+  font-weight: 1000;
+}
 
 
 .thank-you-container {

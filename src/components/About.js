@@ -1,7 +1,7 @@
-import React, { useState,useEffect } from "react";
+import React,{ useState,useEffect } from "react";
 
 import "./AboutPage.css";
-import Reference from "./Reference";
+import ReferenceComponent from "./ReferenceComponent";
 
 
 const About = () => {
@@ -64,32 +64,43 @@ const About = () => {
       description:
         "The Tutor App is a comprehensive platform designed to connect students and tutors seamlessly. It offers a user-friendly interface for scheduling, attending, and managing tutoring sessions. Whether it's academic subjects, skill-based learning, or test preparation, the app provides tailored solutions to meet diverse learning needs.",
       image: "https://framerusercontent.com/images/TCPeAZObpHshqcExOUJlnxgSM.png",
+      link: "https://deignfromharibaskar.framer.website/work/modernization-of-a-subscription-management-platform",
     },
     {
       title: "Share Ride App: Smarter, Greener, and Convenient Rides",
       description:
         "The Share Ride App is a user-friendly platform designed to connect people traveling in the same direction, making commuting more affordable and eco-friendly. Whether you're heading to work, college, or a long-distance journey, this app makes ride-sharing seamless.",
       image: "https://framerusercontent.com/images/ppXLZMuMRfFcDkaV7R6EEwYFtw.png",
+      link: "https://deignfromharibaskar.framer.website/work/revamping-an-e-commerce-website",
     },
     {
       title: "IRCTC Platform: Simplifying Railway Travel in India",
       description:
         "The IRCTC (Indian Railway Catering and Tourism Corporation) platform is India's official gateway for booking train tickets, catering services, and tourism packages. Designed to handle millions of users daily, it provides a seamless railway booking experience.",
       image: "https://framerusercontent.com/images/RiTU9qf3PRWgOcVHeGxgRtWvgLY.png",
+      link: "https://deignfromharibaskar.framer.website/work/developing-a-mobile-health-tracking-app",
     },
   ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNextProject = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projectFrames.length);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % projectFrames.length);
+    }, 4000); // Change project every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [projectFrames.length]);
+
+  const handleProjectClick = (url) => {
+    window.open(url, "_blank"); // Open the link in a new tab
   };
+
+ 
   return (
     <div className="skills-container">
 
-    <Reference />
-    
-      <div className="tech-icons-container">
+    <ReferenceComponent />
+    <div className="tech-icons-container">
       <div className="tech-icons-scroll">
         {/* Duplicating icons for seamless infinite scrolling */}
         {[...icons, ...icons].map((icon, index) => (
@@ -97,6 +108,7 @@ const About = () => {
         ))}
       </div>
     </div>
+      
       {/* Skills Section */}
       <h2 className="skills-title">Skills</h2>
       <div className="skills-list">
@@ -117,8 +129,12 @@ const About = () => {
           </div>
         ))}
       </div>
+      <h2 className="frame-title">Projects</h2>
       <div className="frame-container">
-      <div className="frame-card" onClick={handleNextProject}>
+      <div
+        className="frame-card"
+        onClick={() => handleProjectClick(projectFrames[currentIndex].link)}
+      >
         <div className="frame-content">
           <h2>{projectFrames[currentIndex].title}</h2>
           <p>{projectFrames[currentIndex].description}</p>
@@ -130,6 +146,7 @@ const About = () => {
         />
       </div>
     </div>
+
       {/* Thank You Section */}
       <div className="thank-you-container">
         <div className="thank-you-box">

@@ -1,0 +1,74 @@
+/* Container Styling */
+.unique-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.unique-content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.unique-heading {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.unique-title {
+  font-weight: 1000;
+  margin-left: 8px;
+  font-size: 44px;
+}
+
+.unique-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Tooltip Styling */
+.unique-tooltip {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--sptext);
+}
+
+.unique-tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  left: 50%;
+  top: -35px;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  border: 1px solid var(--sptext);
+  z-index: 10;
+}
+
+/* Profile Image Styling */
+.unique-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unique-profile-image {
+  width: 100%;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
