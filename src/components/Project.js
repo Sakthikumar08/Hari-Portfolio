@@ -15,7 +15,7 @@ const projects = [
     image: require("../assets/irctc.PNG"),
     description:
       "Review of the app to highlight the mismatches and present probable solutions, along with new features.",
-    tech: ["Figma", "Website"],
+    tech: ["Figma", "Framer"],
     link: "/IRCTC",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     image: require("../assets/bodhi.png"),
     description:
       "A sports portal featuring player stats, post-match results, and scorecards for various college sports.",
-    tech: ["React", "MySQL", "Express.js"],
+    tech: ["Figma", "Framer"],
     link: "/sports",
   },
 ];
@@ -71,7 +71,14 @@ const Project = () => {
               </div>
               <div className="project-tech-stack">
                 {project.tech.map((tech, idx) => (
-                  <span key={idx} className="project-tech">{tech}</span>
+                  <span
+                    key={idx}
+                    className={`project-tech ${tech.toLowerCase()}`} // Dynamic class for styling
+                  >
+                    {tech === "Figma" && <i className="fa-brands fa-figma"></i>}
+                    {tech === "Framer" && <i className="fa-brands fa-react"></i>} {/* Using React icon */}
+                    {tech}
+                  </span>
                 ))}
               </div>
               <p className="project-description">{project.description}</p>

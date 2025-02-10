@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import "./Styles.css";
 import profile from "../assets/image.avif";
 
+
 const Home = () => {
     const articles = [
         {
@@ -97,9 +98,13 @@ const Home = () => {
                     initial="hidden"
                     animate="visible"
                     variants={containerVariants}
-                >
+                >  <img
+                className="hero-background"
+                src="https://svgsilh.com/svg/26432.svg"
+                alt="Background"
+            />
                     <motion.h1 className="hero-title" variants={itemVariants}>
-                        Hey there! I'm<br />
+                        Hey there! I'm -<br />
                         <span className="highlight">Hari Baskar.</span>
                     </motion.h1>
                     <motion.p className="hero-subtitle" variants={itemVariants}>
@@ -230,30 +235,31 @@ Expertise extends to Frontend-Development enabling me to create both aesthetical
                         className="portfolio-grid"
                         variants={containerVariants}
                     >
-                        {projects.map((project, index) => (
-                            <motion.div 
-                                key={index}
-                                className="portfolio-card"
-                                variants={itemVariants}
-                                whileHover={{ scale: 1.03 }}
-                                transition={{ type: "spring", stiffness: 300 }}
-                                onClick={() => (window.location.href = project.link)}
-                            >
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="portfolio-image"
-                                />
-                                 <h3 className="portfolio-card-title">{project.title}</h3>
-        
-                                <div className="portfolio-tech-stack">
-                                    {project.tech.map((tech, idx) => (
-                                        <span key={idx} className="portfolio-tech">{tech}</span>
-                                    ))}
-                                </div>
-                                <p className="portfolio-description">{project.description}</p>
-                            </motion.div>
-                        ))}
+                     {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="portfolio-card"
+            variants={itemVariants}
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            onClick={() => (window.location.href = project.link)}
+          >
+            <img src={project.image} alt={project.title} className="portfolio-image" />
+            <h3 className="portfolio-card-title">{project.title}</h3>
+
+            <div className="portfolio-tech-stack">
+              {project.tech.map((tech, idx) => (
+                <span key={idx} className={`portfolio-tech ${tech.toLowerCase()}`}>
+                  {tech === "Figma" && <i className="fa-brands fa-figma"></i>}
+                  {tech === "Framer" && <i className="fa-brands fa-react"></i>} {/* Using React icon */}
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <p className="portfolio-description">{project.description}</p>
+          </motion.div>
+        ))}
                     </motion.div>
                 </motion.div>
 
