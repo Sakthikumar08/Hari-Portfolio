@@ -20,42 +20,28 @@ import irctc18 from "../assets/irctc18.PNG";
 import irctc19 from "../assets/irctc19.PNG";
 import irctc20 from "../assets/irctc20.PNG";
 import irctc21 from "../assets/irctc21.PNG";
-import bodhi11 from "../assets/bodhi11.png";
-import bodhi12 from "../assets/bodhi12.png";
-import bodhi13 from "../assets/bodhi13.png";
-import bodhi14 from "../assets/bodhi14.png";
-import bodhi15 from "../assets/bodhi15.png";
-import bodhi16 from "../assets/bodhi16.png";
-import bodhi17 from "../assets/bodhi17.png";
-import bodhi18 from "../assets/bodhi18.png";
-import bodhi19 from "../assets/bodhi19.png";
-import bodhi20 from "../assets/bodhi20.png";
-import bodhi21 from "../assets/bodhi21.png";
-import bodhi22 from "../assets/bodhi22.png";
-import bodhi23 from "../assets/bodhi23.png";
-import bodhi24 from "../assets/bodhi24.png";
-import bodhi25 from "../assets/bodhi25.png";
-import bodhi26 from "../assets/bodhi26.png";
-import bodhi27 from "../assets/bodhi27.png";
-import bodhi28 from "../assets/bodhi28.png";
-import bodhi29 from "../assets/bodhi29.png";
-import bodhi30 from "../assets/bodhi30.png";
-import bodhi31 from "../assets/bodhi31.png";
-import bodhi32 from "../assets/bodhi32.png";
-import bodhi33 from "../assets/bodhi33.png";
-import bodhi34 from "../assets/bodhi34.png";
-import bodhi35 from "../assets/bodhi35.png";
-import bodhi36 from "../assets/bodhi36.png";
-import bodhi37 from "../assets/bodhi37.png";
-import bodhi38 from "../assets/bodhi38.png";
-import bodhi39 from "../assets/bodhi39.png";
-import bodhi40 from "../assets/bodhi40.png";
-import bodhi41 from "../assets/bodhi41.png";
-import bodhi42 from "../assets/bodhi42.png"; 
-import bodhi43 from "../assets/bodhi43.png";
-import bodhi44 from "../assets/bodhi44.png";  
-import bodhi45 from "../assets/bodhi45.png";
-import bodhi46 from "../assets/bodhi46.png";
+import irctc22 from "../assets/irctc22.PNG";
+import irctc23 from "../assets/irctc23.PNG";
+import irctc24 from "../assets/irctc24.PNG";
+import irctc25 from "../assets/irctc25.PNG";
+import irctc26 from "../assets/irctc26.PNG";
+import irctc27 from "../assets/irctc27.PNG";
+import irctc28 from "../assets/irctc28.PNG";
+import irctc29 from "../assets/irctc29.PNG";
+import irctc30 from "../assets/irctc30.PNG";
+import irctc31 from "../assets/irctc31.PNG";
+import irctc32 from "../assets/irctc32.PNG";
+import irctc33 from "../assets/irctc33.PNG";
+import irctc34 from "../assets/irctc34.PNG";
+import irctc35 from "../assets/irctc35.PNG";
+import irctc36 from "../assets/irctc36.PNG";
+import irctc37 from "../assets/irctc37.PNG";
+import irctc38 from "../assets/irctc38.PNG";
+import irctc39 from "../assets/irctc39.PNG";
+import irctc40 from "../assets/irctc40.PNG";
+import irctc41 from "../assets/irctc41.PNG";
+import irctc42 from "../assets/irctc42.PNG";
+
 import "./CreativePage.css";
 
 const Irctc = () => {
@@ -471,259 +457,278 @@ are Business travelers. I asked them set of 5 questions to gather their insights
 
 
 </div>
-<div ref={(el) => (sectionRefs.current["Information Architecture"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Information Architecture</h2>
-       
-            <img 
-  src={bodhi22} 
-  alt="bodhi22" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
-          
+<div ref={(el) => (sectionRefs.current["Result"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Result</h2>
+            <p className="content-p">
+            During the guerrilla research conducted with 5 IRCTC users, It was found that 2 of them
+expressed the need for a round-trip option within the website, as they had faced issues
+in that aspect. Additionally, they also expressed the expectation for having a filter for
+confirmed seats availability. Furthermore, secondary research conducted on Google
+Playstore revealed that many users faced challenges related to difficulty in finding
+features, website crashes during transaction and website showing irrelevant Ad’s. These
+insights highlight the areas of improvement required to enhance the user experience 
+of the IRCTC website.
+            </p>  
+    
           </div>
 
-          <div ref={(el) => (sectionRefs.current["User Flow"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">User Flow</h2>
-            <h3>Hire a tutor</h3>
-       
-            <img 
-  src={bodhi23} 
-  alt="bodhi23" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
+          <div ref={(el) => (sectionRefs.current["User Persona"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">User Persona</h2>
 
-          
+            <img 
+  src={irctc22} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto",marginBottom:"20px" }} 
+/>
+<p className="content-p">
+“I want a hassle-free experience when booking my train tickets. A simple way
+      to plan round trips and ensure confirmed seat availability would make
+                                  my travel planning much smoother ”
+            </p> 
+            <img 
+  src={irctc23} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto",marginBottom:"20px" }} 
+/>
+<p className="content-p">
+“In the world of travel, clarity is the compass, efficiency is the engine, and
+        every click should count - catering to users like Vijay is not just
+                                 a goal, it’s our journey’s purpose  ”
+            </p>  
           </div>
 
-          <div ref={(el) => (sectionRefs.current["Task Flow"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Task Flow</h2>
-            <h3>To Track Student Progress</h3>
-       
-            <img 
-  src={bodhi24} 
-  alt="bodhi24" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
           
-          </div>
 
-          <div ref={(el) => (sectionRefs.current["Low Fidelity WireFrame"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Low Fidelity WireFrame</h2>
+          <div ref={(el) => (sectionRefs.current["Empathy mapping"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Empathy mapping</h2>
           
        
             <img 
-  src={bodhi25} 
-  alt="bodhi25" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
-          
-          </div>
-
-          <div ref={(el) => (sectionRefs.current["Style Guide"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Style Guide</h2>
-          
-       
-            <img 
-  src={bodhi26} 
-  alt="bodhi26" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
-          
-          </div>
-
-          <div ref={(el) => (sectionRefs.current["Medium Fidelity WireFrame"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Medium Fidelity WireFrame</h2>
-          
-       
-            <img 
-  src={bodhi27} 
-  alt="bodhi27" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
-          
-          </div>
-
-          <div ref={(el) => (sectionRefs.current["Usability Testing Result"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Usability Testing Result</h2>
-          
-       
-            <img 
-  src={bodhi28} 
-  alt="bodhi28" 
+  src={irctc24} 
+  alt="irctc" 
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
 />
+          </div>
+          <div ref={(el) => (sectionRefs.current["Information Architecture"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Information Architecture</h2>
+          
+       
+            <img 
+  src={irctc25} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+          </div>
+          <div ref={(el) => (sectionRefs.current["Color Used"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Color Used</h2>
+          
+       
+            <img 
+  src={irctc26} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+          </div>
+          <div ref={(el) => (sectionRefs.current["Typography"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Typography</h2>
+          
+       
+            <img 
+  src={irctc27} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+          </div>
+          <div ref={(el) => (sectionRefs.current["Iconography"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Iconography</h2>
+          
+       
+            <img 
+  src={irctc28} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+          </div>
+          <div ref={(el) => (sectionRefs.current["Low Fidelity Wireframes"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Low Fidelity Wireframes</h2>
+          
+       
+            <img 
+  src={irctc29} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+          
+          <img 
+  src={irctc30} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+          </div>
+         
+          <div ref={(el) => (sectionRefs.current["Hi-Fidelity Design With Major Correction"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Hi-Fidelity Design With Major Correction</h2>
+           <p className="content-p">
+           I have done a major correction in this web application based on Heuristic Evaluation
+           and User Research
+            </p>  
+      
+          </div>
+          <div ref={(el) => (sectionRefs.current["Home Screen"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Home Screen </h2>
+           <p className="content-p">
+           The redesigned IRCTC homepage now offers enhanced user convenience with added features. Experience
+seamless travel planning with the newly integrated round trip feature. The revamped menu categorization
+ensures easy navigation, while the SOS button provides quick assistance in emergencies. Enjoy a user
+-friendly interface with these exclusive additions, setting the redesigned homepage apart from the current
+website.   
+            </p> 
+            <img 
+  src={irctc31} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+          
+          <img 
+  src={irctc32} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/> 
 <img 
-  src={bodhi29} 
-  alt="bodhi29" 
+  src={irctc33} 
+  alt="irctc" 
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto", marginBottom: "20px" }} 
-/>
-
-          
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/> 
+      
           </div>
-
-          <div ref={(el) => (sectionRefs.current["Screen Details"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Screen Details</h2>
-
-            <h3>Onboarding Screens</h3>
-       
+          <div ref={(el) => (sectionRefs.current["SOS Emergency Screen"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">SOS Emergency Screen </h2>
+           <p className="content-p">
+           Our innovative SOS feature goes beyond conventional emergency assistance, allowing you to share your
+location, crucial medical information and contact relevant authorities like TTR/RPF. with this 
+comprehensive safety net, your journey is not just convenient but also secure. interface with these exclusive additions, setting the redesigned homepage apart from the current
+website.   
+            </p> 
             <img 
-  src={bodhi30} 
-  alt="bodhi30" 
+  src={irctc34} 
+  alt="irctc" 
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
 />
-
-<h3>Language Screen</h3>
-       
-            <img 
-  src={bodhi31} 
-  alt="bodhi31" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>Home Screen</h3>
-       
-            <img 
-  src={bodhi32} 
-  alt="bodhi32" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>Search Result Screen</h3>
-       
-            <img 
-  src={bodhi33} 
-  alt="bodhi33" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>Nearby Teacher Screen</h3>
-       
-            <img 
-  src={bodhi34} 
-  alt="bodhi34" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>Progress Tracker</h3>
-       
-            <img 
-  src={bodhi35} 
-  alt="bodhi35" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>Payment Tracker Screen</h3>
-       
-            <img 
-  src={bodhi36} 
-  alt="bodhi36" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>Payment Remainder Screen</h3>
-       
-            <img 
-  src={bodhi37} 
-  alt="bodhi37" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>Offline Resource Library Screen</h3>
-       
-            <img 
-  src={bodhi38} 
-  alt="bodhi38" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>Profile Screen</h3>
-       
-            <img 
-  src={bodhi39} 
-  alt="bodhi39" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-<h3>My Teacher List Screen</h3>
-       
-            <img 
-  src={bodhi40} 
-  alt="bodhi40" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
+  
           </div>
-
-
-          <div ref={(el) => (sectionRefs.current["All Mobile Screen"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">All Mobile Screen</h2>
-          
-       
+          <div ref={(el) => (sectionRefs.current["Train Selection Screen"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Train Selection Screen </h2>
+           <p className="content-p">
+           Experience a revamped train selection screen on the IRCTC website application that puts you in control.
+Navigate effortlessly with thr simplified and clean design, eliminating visual clutter. The new features 
+include a confirmed seat toggle button for swift booking decisions nad an edit fare alert button for
+personalized fare notifications. Enjoy a streamlined and user-centric interface for a seamless train 
+selection process.  
+            </p> 
             <img 
-  src={bodhi41} 
-  alt="bodhi41" 
+  src={irctc35} 
+  alt="irctc" 
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
 />
-
-          
+<p className="content-p">
+My innovative redesign includes a unique feature that lets you preview the coach you wish to book,
+providing a visual understanding before making your reservation. Enjoy a user-friendly interface that 
+enhances your booking experience, putting you in control of your train journey from the start.
+            </p> 
+            <img 
+  src={irctc36} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+  
           </div>
-
-          <div ref={(el) => (sectionRefs.current["website Screen"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight leading-tight">website Screen</h2>
-          
-       <h3>Onboarding Screens</h3>
+          <div ref={(el) => (sectionRefs.current["Fare Alert Screen"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Fare Alert Screen </h2>
+           <p className="content-p">
+           Featuring the new edit fare alert feature. Tailor your fare notification with ease, ensuring a personalized
+travel experience. Stay in control of your journey costs and receive alerts that match your preferences.
+Embrace a seamless and customizable booking process that puts you at the forefront of your travel
+planning.
+            </p> 
             <img 
-  src={bodhi42} 
-  alt="bodhi42" 
+  src={irctc37} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+  
+          </div>
+          <div ref={(el) => (sectionRefs.current["Ticket Review Screen"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Ticket Review Screen</h2>
+           <p className="content-p">
+           The redesigned ticket review screen features a status bar to validate the visibility of system status
+Plus, enjoy our exclusive value add pack offering options like refund on cancellation, instant refund,
+date change, and round-the-clock customer service. Elevate your travel experience with a user
+-friendly interface and enhanced services tailored to user needs.
+            </p> 
+            <img 
+  src={irctc38} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+  
+          </div>
+          <div ref={(el) => (sectionRefs.current["Traveler Details Screen"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Traveler Details Screen</h2>
+           <p className="content-p">
+           Experience seamless travel planning with the redesigned traveler details screen on the IRCTC website.
+Effortlessly input passenger information, customize preferences, and breeze through the booking
+process with a user-friendly interface. Enjoy a simplified and efficient way to manage your travel details
+making your journey with us even more convenient.
+            </p> 
+            <img 
+  src={irctc39} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+  
+          </div>
+          <div ref={(el) => (sectionRefs.current["Payment Screen"] = el)} className="section">
+            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Payment Screen</h2>
+           <p className="content-p">
+           My redesign introduces a seamless and secure payment experience. Excitingly, I’ve added the Pay later
+feature, allowing you the flexibility to complete your transaction with ease. Enjoy a stress-free booking
+process, combining convenience and choice on our user friendly platform.
+            </p> 
+            <img 
+  src={irctc40} 
+  alt="irctc" 
+  className="hero-image" 
+  style={{ display: "block", margin: "0 auto" , marginBottom: "20px"}} 
+/>
+  
+<img 
+  src={irctc41} 
+  alt="bodhi46" 
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
-<h3>Home Screen</h3>
-            <img 
-  src={bodhi43} 
-  alt="bodhi43" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
-<h3>Profile Screen</h3>
-            <img 
-  src={bodhi44} 
-  alt="bodhi44" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
-<h3>Payment Screen</h3>
-            <img 
-  src={bodhi45} 
-  alt="bodhi45" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
-          
           </div>
 
           <img 
-  src={bodhi46} 
+  src={irctc42} 
   alt="bodhi46" 
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 

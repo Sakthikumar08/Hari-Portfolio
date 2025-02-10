@@ -7,6 +7,8 @@ import Blog from "./components/Blog";
 import Creative from "./components/Creative";
 import About from "./components/About";
 import Irctc from "./components/Irctc";
+import Shareride from "./components/Shareride";
+import Personalfin from "./components/Personalfin";
 function App() {
   return (
     <>
@@ -20,6 +22,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/creative" element={<Creative />} />
             <Route path="/IRCTC" element={<Irctc />} />
+            <Route path="/shareride" element={<Shareride />} />
+            <Route path="/Personal-fin-app" element={<Personalfin />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </div>

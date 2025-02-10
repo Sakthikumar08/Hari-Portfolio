@@ -49,21 +49,37 @@ import "./CreativePage.css";
 
 const CreativePage = () => {
   const [activeSection, setActiveSection] = useState("");
+  const [activeSubsection, setActiveSubsection] = useState(null);
   const sectionRefs = useRef({});
+  const subsectionRefs = useRef({});
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 200;
+      
+      let currentSubsection = null;
+      let foundSection = false;
+
       Object.keys(sectionRefs.current).forEach((id) => {
         const element = sectionRefs.current[id];
-        if (
-          element &&
-          element.offsetTop <= scrollPosition &&
-          element.offsetTop + element.offsetHeight > scrollPosition
-        ) {
+        if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.offsetHeight > scrollPosition) {
           setActiveSection(id);
+          foundSection = true;
         }
       });
+
+      Object.keys(subsectionRefs.current).forEach((id) => {
+        const element = subsectionRefs.current[id];
+        if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.offsetHeight > scrollPosition) {
+          currentSubsection = id;
+        }
+      });
+
+      if (currentSubsection) {
+        setActiveSubsection(currentSubsection);
+      } else if (!foundSection) {
+        setActiveSubsection(null);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -73,6 +89,14 @@ const CreativePage = () => {
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
     const element = sectionRefs.current[sectionId];
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToSubsection = (subsectionId) => {
+    setActiveSubsection(subsectionId);
+    const element = subsectionRefs.current[subsectionId];
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -117,7 +141,7 @@ const CreativePage = () => {
       <div className="content-wrapper">
         <div className="div2">
           <div ref={(el) => (sectionRefs.current["Why I Started This Project"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Why I Started This Project</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Why I Started This Project</h2>
             <p className="content-p">
             I embarked on the journey of creating tutor finding app driven by a profound concern for the educational challenges
 that many rural students encounter. Witnessing their determination to excel academically despite the scarcity of
@@ -134,7 +158,7 @@ win-win scenario.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Project Overview"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Project Overview</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Project Overview</h2>
             <p className="content-p">
             Finding tutor is a very common problem in our country. Students are
 struggling to get tutor who can accommodate the student’s schedule
@@ -158,7 +182,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Problem Statement"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Problem Statement</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Problem Statement</h2>
             <ul>
       <li >Limited Tutor Options: Without a tutor finding app, rural students may have fewer options when it comes to selecting a tutor with expertise in specific subjects or topics.</li>
       <li >Travel Constraints: Travelling to urban areas for tutoring sessions can be time-consuming and expensive.</li>
@@ -181,7 +205,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Possible Solution"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Possible Solution</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Possible Solution</h2>
             <ul>
       <li >
         Creating a convenient digital platform for finding tuition.
@@ -224,7 +248,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Design Process"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Design Process</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Design Process</h2>
        
             <img 
   src={bodhi7} 
@@ -235,7 +259,7 @@ User Interface design of the app here.
 
           </div>
           <div ref={(el) => (sectionRefs.current["Project Timeline"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Project Timeline</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Project Timeline</h2>
        
             <img 
   src={bodhi8} 
@@ -247,7 +271,8 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Responses of Qualitative & Quantitative Analysis"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Responses of Qualitative & Quantitative Analysis</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Responses of Qualitative & Quantitative Analysis</h2></div>
+       <div ref={(el) => (subsectionRefs.current["01 Teacher1"] = el)}>
        <h3>01 Teacher</h3>
        <img 
   src={bodhi9} 
@@ -267,7 +292,9 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto", marginBottom: "20px" }} 
 />
+</div>
 
+<div ref={(el) => (subsectionRefs.current["02 Student1"] = el)}>
 <h3>02 Student</h3>
        <img 
   src={bodhi12} 
@@ -288,12 +315,12 @@ User Interface design of the app here.
   style={{ display: "block", margin: "0 auto", marginBottom: "20px" }} 
 />
 
-
-          </div>
+</div>
+          
 
           <div ref={(el) => (sectionRefs.current["User Persona"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">User Persona</h2>
-
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">User Persona</h2></div>
+            <div ref={(el) => (subsectionRefs.current["01 Teacher2"] = el)}>
             <h3>01 Teacher</h3>
        
             <img 
@@ -302,21 +329,22 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
-<h3>02 Student</h3>
+</div>
+<div ref={(el) => (subsectionRefs.current["02 Student2"] = el)}>
+<h3 >02 Student</h3>
        
             <img 
   src={bodhi16} 
   alt="bodhi16" 
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
+  style={{ display: "block", margin: "0 auto",marginBottom:"1.5rem" }} 
 />
-
-          </div>
+</div>
+         
 
           <div ref={(el) => (sectionRefs.current["Empathy Map"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Empathy Map</h2>
-
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Empathy Map</h2></div>
+          <div  ref={(el) => (subsectionRefs.current["01 Teacher3"] = el)}>
             <h3>01 Teacher</h3>
        
             <img 
@@ -325,19 +353,20 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
+<div ref={(el) => (subsectionRefs.current["02 Student3"] = el)}>
 <h3>02 Student</h3>
        
             <img 
   src={bodhi18} 
   alt="bodhi18" 
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
+  style={{ display: "block", margin: "0 auto",marginBottom:"1.5rem" }} 
 />
 
-          </div>
+</div>
           <div ref={(el) => (sectionRefs.current["Competitive Analysis"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Competitive Analysis</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Competitive Analysis</h2>
        
             <img 
   src={bodhi19} 
@@ -349,7 +378,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["User Journey Map"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">User Journey Map</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">User Journey Map</h2>
 
             <h3>Priya's Board Exam Preparation</h3>
       <p style={{ letterSpacing: "0.05em",lineHeight:"150%",color:"rgb(215, 214, 214)"}}><strong  style={{color:"white"}}>Name:</strong> Priya</p>
@@ -380,7 +409,7 @@ User Interface design of the app here.
 
 </div>
 <div ref={(el) => (sectionRefs.current["Information Architecture"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Information Architecture</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Information Architecture</h2>
        
             <img 
   src={bodhi22} 
@@ -393,7 +422,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["User Flow"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">User Flow</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">User Flow</h2>
             <h3>Hire a tutor</h3>
        
             <img 
@@ -407,7 +436,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Task Flow"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Task Flow</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Task Flow</h2>
             <h3>To Track Student Progress</h3>
        
             <img 
@@ -421,7 +450,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Low Fidelity WireFrame"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Low Fidelity WireFrame</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Low Fidelity WireFrame</h2>
           
        
             <img 
@@ -435,7 +464,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Style Guide"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Style Guide</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Style Guide</h2>
           
        
             <img 
@@ -449,7 +478,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Medium Fidelity WireFrame"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Medium Fidelity WireFrame</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Medium Fidelity WireFrame</h2>
           
        
             <img 
@@ -463,7 +492,7 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Usability Testing Result"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Usability Testing Result</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Usability Testing Result</h2>
           
        
             <img 
@@ -483,8 +512,8 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["Screen Details"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Screen Details</h2>
-
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Screen Details</h2></div>
+            <div ref={(el) => (subsectionRefs.current["Onboarding Screens"] = el)}>
             <h3>Onboarding Screens</h3>
        
             <img 
@@ -493,7 +522,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
+<div ref={(el) => (subsectionRefs.current["Language Screen"] = el)}>
 <h3>Language Screen</h3>
        
             <img 
@@ -502,6 +532,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Home Screen"] = el)}>
 <h3>Home Screen</h3>
        
             <img 
@@ -510,6 +542,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Search Result Screen"] = el)}>
 <h3>Search Result Screen</h3>
        
             <img 
@@ -518,6 +552,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Nearby Teacher Screen"] = el)}>
 <h3>Nearby Teacher Screen</h3>
        
             <img 
@@ -526,6 +562,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Progress Tracker"] = el)}>
 <h3>Progress Tracker</h3>
        
             <img 
@@ -534,6 +572,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Payment Tracker Screen"] = el)}>
 <h3>Payment Tracker Screen</h3>
        
             <img 
@@ -542,6 +582,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Payment Remainder Screen"] = el)}>
 <h3>Payment Remainder Screen</h3>
        
             <img 
@@ -550,6 +592,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Offline Resource Library Screen"] = el)}>
 <h3>Offline Resource Library Screen</h3>
        
             <img 
@@ -557,7 +601,8 @@ User Interface design of the app here.
   alt="bodhi38" 
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
-/>
+/></div>
+<div ref={(el) => (subsectionRefs.current["Profile Screen"] = el)}>
 <h3>Profile Screen</h3>
        
             <img 
@@ -566,6 +611,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["My Teacher List Screen"] = el)}>
 <h3>My Teacher List Screen</h3>
        
             <img 
@@ -575,11 +622,11 @@ User Interface design of the app here.
   style={{ display: "block", margin: "0 auto" }} 
 />
 
-          </div>
+</div>
 
 
           <div ref={(el) => (sectionRefs.current["All Mobile Screen"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">All Mobile Screen</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">All Mobile Screen</h2>
           
        
             <img 
@@ -593,8 +640,9 @@ User Interface design of the app here.
           </div>
 
           <div ref={(el) => (sectionRefs.current["website Screen"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight leading-tight">website Screen</h2>
-          
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight leading-tight" >website Screen</h2>
+            </div>
+  <div ref={(el) => (subsectionRefs.current["Onboarding Screens1"] = el)}>
        <h3>Onboarding Screens</h3>
             <img 
   src={bodhi42} 
@@ -602,7 +650,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
+<div ref={(el) => (subsectionRefs.current["Home Screen1"] = el)}>
 <h3>Home Screen</h3>
             <img 
   src={bodhi43} 
@@ -610,7 +659,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
+<div ref={(el) => (subsectionRefs.current["Profile Screen1"] = el)}>
 <h3>Profile Screen</h3>
             <img 
   src={bodhi44} 
@@ -618,7 +668,8 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
+<div ref={(el) => (subsectionRefs.current["Payment Screen1"] = el)}>
 <h3>Payment Screen</h3>
             <img 
   src={bodhi45} 
@@ -626,15 +677,16 @@ User Interface design of the app here.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
           
-          </div>
+          
 
           <img 
   src={bodhi46} 
   alt="bodhi46" 
+  
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
+  style={{ display: "block", margin: "0 auto",marginTop:"2rem" }} 
 />
           
         </div>
@@ -650,9 +702,34 @@ User Interface design of the app here.
   <li className={activeSection === "Possible Solution" ? "active" : ""} onClick={() => scrollToSection("Possible Solution")}>Possible Solution</li>
   <li className={activeSection === "Design Process" ? "active" : ""} onClick={() => scrollToSection("Design Process")}>Design Process</li>
   <li className={activeSection === "Project Timeline" ? "active" : ""} onClick={() => scrollToSection("Project Timeline")}>Project Timeline</li>
-  <li className={activeSection === "Responses of Qualitative & Quantitative Analysis" ? "active" : ""} onClick={() => scrollToSection("Responses of Qualitative & Quantitative Analysis")}>Responses of Qualitative & Quantitative Analysis</li>
+  <li className={activeSection === "Responses of Qualitative & Quantitative Analysis" ? "active" : ""} onClick={() => scrollToSection("Responses of Qualitative & Quantitative Analysis")}>Responses of Qualitative & Quantitative Analysis
+  </li>
+  <ul>
+                <li style={{paddingLeft:"12px"}} className={activeSubsection === "01 Teacher1" ? "subactive" : ""} onClick={() => scrollToSubsection("01 Teacher")}>
+                   01 Teacher
+                </li>
+                <li style={{paddingLeft:"12px"}} className={activeSubsection === "02 Student1" ? "subactive" : ""} onClick={() => scrollToSubsection("02 Student")}>
+                   02 Student
+                </li>
+              </ul>
   <li className={activeSection === "User Persona" ? "active" : ""} onClick={() => scrollToSection("User Persona")}>User Persona</li>
+  <ul>
+                <li style={{paddingLeft:"12px"}} className={activeSubsection === "01 Teacher2" ? "subactive" : ""} onClick={() => scrollToSubsection("01 Teacher")}>
+                   01 Teacher
+                </li>
+                <li style={{paddingLeft:"12px"}} className={activeSubsection === "02 Student2" ? "subactive" : ""} onClick={() => scrollToSubsection("02 Student")}>
+                   02 Student
+                </li>
+              </ul>
   <li className={activeSection === "Empathy Map" ? "active" : ""} onClick={() => scrollToSection("Empathy Map")}>Empathy Map</li>
+  <ul>
+                <li style={{paddingLeft:"12px"}} className={activeSubsection === "01 Teacher3" ? "subactive" : ""} onClick={() => scrollToSubsection("01 Teacher")}>
+                   01 Teacher
+                </li>
+                <li style={{paddingLeft:"12px"}} className={activeSubsection === "02 Student3" ? "subactive" : ""} onClick={() => scrollToSubsection("02 Student")}>
+                   02 Student
+                </li>
+              </ul>
   <li className={activeSection === "Competitive Analysis" ? "active" : ""} onClick={() => scrollToSection("Competitive Analysis")}>Competitive Analysis</li>
   <li className={activeSection === "User Journey Map" ? "active" : ""} onClick={() => scrollToSection("User Journey Map")}>User Journey Map</li>
   <li className={activeSection === "Information Architecture" ? "active" : ""} onClick={() => scrollToSection("Information Architecture")}>Information Architecture</li>
@@ -663,8 +740,57 @@ User Interface design of the app here.
   <li className={activeSection === "Medium Fidelity WireFrame" ? "active" : ""} onClick={() => scrollToSection("Medium Fidelity WireFrame")}>Medium Fidelity WireFrame</li>
   <li className={activeSection === "Usability Testing Result" ? "active" : ""} onClick={() => scrollToSection("Usability Testing Result")}>Usability Testing Result</li>
   <li className={activeSection === "Screen Details" ? "active" : ""} onClick={() => scrollToSection("Screen Details")}>Screen Details</li>
+  <ul>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Onboarding Screens" ? "subactive" : ""} onClick={() => scrollToSubsection("Onboarding Screens")}>
+              Onboarding Screens
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Language Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("Language Screen")}>
+              Language Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Home Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("Home Screen")}>
+              Home Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Search Result Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("Search Result Screen")}>
+              Search Result Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Nearby Teacher Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("Nearby Teacher Screen")}>
+              Nearby Teacher Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Progress Tracker" ? "subactive" : ""} onClick={() => scrollToSubsection("Progress Tracker")}>
+              Progress Tracker
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Payment Tracker Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("Payment Tracker Screen")}>
+              Payment Tracker Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Payment Remainder Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("Payment Remainder Screen")}>
+              Payment Remainder Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Offline Resource Library Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("Offline Resource Library Screen")}>
+              Offline Resource Library Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Profile Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("Profile Screen")}>
+              Profile Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "My Teacher List Screen" ? "subactive" : ""} onClick={() => scrollToSubsection("My Teacher List Screen")}>
+              My Teacher List Screen
+            </li>
+            </ul>
   <li className={activeSection === "All Mobile Screen" ? "active" : ""} onClick={() => scrollToSection("All Mobile Screen")}>All Mobile Screen</li>
   <li className={activeSection === "website Screen" ? "active" : ""} onClick={() => scrollToSection("website Screen")}>Website Screen</li>
+  <ul>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Onboarding Screens1" ? "subactive" : ""} onClick={() => scrollToSubsection("Onboarding Screens")}>
+              Onboarding Screens
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Home Screen1" ? "subactive" : ""} onClick={() => scrollToSubsection("Home Screen")}>
+              Home Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Profile Screen1" ? "subactive" : ""} onClick={() => scrollToSubsection("Profile Screen")}>
+              Profile Screen
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Payment Screen1" ? "subactive" : ""} onClick={() => scrollToSubsection("Payment Screen")}>
+              Payment Screen
+            </li>
+          </ul>
 </ul>
 
           </h3>

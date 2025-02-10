@@ -19,13 +19,21 @@ const projects = [
     link: "/IRCTC",
   },
   {
-    title: "Spotlight on Sports",
-    image: require("../assets/bodhi.png"),
+    title: "Share Ride App: Smarter, Greener, and Convenient Rides",
+    image: require("../assets/shareride.avif"),
     description:
-      "A sports portal featuring player stats, post-match results, and scorecards for various college sports.",
+      "The Share Ride App connects travelers heading in the same direction, making commuting cost-effective and eco-friendly. It ensures easy and secure ride-sharing for work, college, or long-distance trips.",
     tech: ["Figma", "Framer"],
-    link: "/sports",
+    link: "/shareride",
   },
+  {
+    title: "Personal Finance Management Application",
+    image: require("../assets/pfma.avif"),
+    description:
+      "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",
+    tech: ["Figma", "Framer"],
+    link: "/personal-fin-app",
+  }
 ];
 
 const Project = () => {
