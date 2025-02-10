@@ -57,7 +57,7 @@ const About = () => {
     { src: "https://framerusercontent.com/images/4S3jy7RUc36K4vCFKUPh2LY9qK0.png", alt: "Figma" },
     { src: "https://framerusercontent.com/images/l3L1wNlg26qsR2gchTV8sBvyOt4.png", alt: "CSS" },
   ];
-  /*const frames = [
+  const frames = [
     {
       title: "Tutor App: Empowering Learning, Anytime, Anywhere",
       description:
@@ -87,10 +87,10 @@ const About = () => {
 
     return () => clearInterval(interval);
   }, [frames.length]);
-*/
+
   return (
     <div className="skills-container">
-     {/* <div className="frames-container">
+     <div className="frames-container">
       {frames.map((frame, index) => (
         <div
           key={index}
@@ -103,7 +103,7 @@ const About = () => {
           <img src={frame.image} alt={frame.title} className="frame-image" />
         </div>
       ))}
-    </div> */ }
+    </div> 
 
 
 
