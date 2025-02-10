@@ -90,20 +90,7 @@ const About = () => {
 
   return (
     <div className="skills-container">
-     <div className="frames-container">
-      {frames.map((frame, index) => (
-        <div
-          key={index}
-          className={`frame-card ${index === activeIndex ? "active" : "hidden"}`}
-        >
-          <div className="frame-content">
-            <h2>{frame.title}</h2>
-            <p>{frame.description}</p>
-          </div>
-          <img src={frame.image} alt={frame.title} className="frame-image" />
-        </div>
-      ))}
-    </div> 
+    
 
 
 
@@ -128,7 +115,20 @@ const About = () => {
           </div>
         ))}
       </div>
-
+   <div className="frames-container">
+      {frames.map((frame, index) => (
+        <div
+          key={index}
+          className={`frame-card ${index === activeIndex ? "active" : "hidden"}`}
+        >
+          <div className="frame-content">
+            <h2>{frame.title}</h2>
+            <p>{frame.description}</p>
+          </div>
+          <img src={frame.image} alt={frame.title} className="frame-image" />
+        </div>
+      ))}
+    </div> 
       {/* Thank You Section */}
       <div className="thank-you-container">
         <div className="thank-you-box">
