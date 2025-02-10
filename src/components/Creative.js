@@ -644,28 +644,29 @@ User Interface design of the app here.
 
           <h3>
           <ul>
-            <li onClick={() => scrollToSection("Why I Started This Project")}>Why I Started This Project</li>
-            <li onClick={() => scrollToSection("Project Overview")}>Project Overview</li>
-            <li onClick={() => scrollToSection("Problem Statement")}>Problem Statement</li>
-            <li onClick={() => scrollToSection("Possible Solution")}>Possible Solution</li>
-            <li onClick={() => scrollToSection("Design Process")}>Design Process</li>
-            <li onClick={() => scrollToSection("Project Timeline")}>Project Timeline</li>
-            <li onClick={() => scrollToSection("Responses of Qualitative & Quantitative Analysis")}>Responses of Qualitative & Quantitative Analysis</li>
-            <li onClick={() => scrollToSection("User Persona")}>User Persona</li>
-            <li onClick={() => scrollToSection("Empathy Map")}>Empathy Map</li>
-            <li onClick={() => scrollToSection("Competitive Analysis")}>Competitive Analysis</li>
-            <li onClick={() => scrollToSection("User Journey Map")}>User Journey Map</li>
-            <li onClick={() => scrollToSection("Information Architecture")}>Information Architecture</li>
-            <li onClick={() => scrollToSection("User Flow")}>User Flow</li>
-            <li onClick={() => scrollToSection("Task Flow")}>Task Flow</li>
-            <li onClick={() => scrollToSection("Low Fidelity WireFrame")}>Low Fidelity WireFrame</li>
-            <li onClick={() => scrollToSection("Style Guide")}>Style Guide</li>
-            <li onClick={() => scrollToSection("Medium Fidelity WireFrame")}>Medium Fidelity WireFrame</li>
-            <li onClick={() => scrollToSection("Usability Testing Result")}>Usability Testing Result</li>
-            <li onClick={() => scrollToSection("Screen Details")}>Screen Details</li>
-            <li onClick={() => scrollToSection("All Mobile Screen")}>All Mobile Screen</li>
-            <li onClick={() => scrollToSection("website Screen")}>website Screen</li>
-          </ul>
+  <li className={activeSection === "Why I Started This Project" ? "active" : ""} onClick={() => scrollToSection("Why I Started This Project")}>Why I Started This Project</li>
+  <li className={activeSection === "Project Overview" ? "active" : ""} onClick={() => scrollToSection("Project Overview")}>Project Overview</li>
+  <li className={activeSection === "Problem Statement" ? "active" : ""} onClick={() => scrollToSection("Problem Statement")}>Problem Statement</li>
+  <li className={activeSection === "Possible Solution" ? "active" : ""} onClick={() => scrollToSection("Possible Solution")}>Possible Solution</li>
+  <li className={activeSection === "Design Process" ? "active" : ""} onClick={() => scrollToSection("Design Process")}>Design Process</li>
+  <li className={activeSection === "Project Timeline" ? "active" : ""} onClick={() => scrollToSection("Project Timeline")}>Project Timeline</li>
+  <li className={activeSection === "Responses of Qualitative & Quantitative Analysis" ? "active" : ""} onClick={() => scrollToSection("Responses of Qualitative & Quantitative Analysis")}>Responses of Qualitative & Quantitative Analysis</li>
+  <li className={activeSection === "User Persona" ? "active" : ""} onClick={() => scrollToSection("User Persona")}>User Persona</li>
+  <li className={activeSection === "Empathy Map" ? "active" : ""} onClick={() => scrollToSection("Empathy Map")}>Empathy Map</li>
+  <li className={activeSection === "Competitive Analysis" ? "active" : ""} onClick={() => scrollToSection("Competitive Analysis")}>Competitive Analysis</li>
+  <li className={activeSection === "User Journey Map" ? "active" : ""} onClick={() => scrollToSection("User Journey Map")}>User Journey Map</li>
+  <li className={activeSection === "Information Architecture" ? "active" : ""} onClick={() => scrollToSection("Information Architecture")}>Information Architecture</li>
+  <li className={activeSection === "User Flow" ? "active" : ""} onClick={() => scrollToSection("User Flow")}>User Flow</li>
+  <li className={activeSection === "Task Flow" ? "active" : ""} onClick={() => scrollToSection("Task Flow")}>Task Flow</li>
+  <li className={activeSection === "Low Fidelity WireFrame" ? "active" : ""} onClick={() => scrollToSection("Low Fidelity WireFrame")}>Low Fidelity WireFrame</li>
+  <li className={activeSection === "Style Guide" ? "active" : ""} onClick={() => scrollToSection("Style Guide")}>Style Guide</li>
+  <li className={activeSection === "Medium Fidelity WireFrame" ? "active" : ""} onClick={() => scrollToSection("Medium Fidelity WireFrame")}>Medium Fidelity WireFrame</li>
+  <li className={activeSection === "Usability Testing Result" ? "active" : ""} onClick={() => scrollToSection("Usability Testing Result")}>Usability Testing Result</li>
+  <li className={activeSection === "Screen Details" ? "active" : ""} onClick={() => scrollToSection("Screen Details")}>Screen Details</li>
+  <li className={activeSection === "All Mobile Screen" ? "active" : ""} onClick={() => scrollToSection("All Mobile Screen")}>All Mobile Screen</li>
+  <li className={activeSection === "website Screen" ? "active" : ""} onClick={() => scrollToSection("website Screen")}>Website Screen</li>
+</ul>
+
           </h3>
         </div>
       </div>

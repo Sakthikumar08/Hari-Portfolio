@@ -223,11 +223,15 @@ body {
   animation: rotateIn 1s ease-in-out;
 }
 
-.div3 li:hover,
-.div3 li.active {
+.div3 li:hover{
   color: var(--sptext);
 }
 
+.div3 li.active {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;
