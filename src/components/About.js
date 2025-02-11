@@ -1,6 +1,7 @@
 import React,{ useState,useEffect } from "react";
 
 import "./AboutPage.css";
+import IconsSection from "./IconsSection";
 import ReferenceComponent from "./ReferenceComponent";
 
 
@@ -100,14 +101,8 @@ const About = () => {
     <div className="skills-container">
 
     <ReferenceComponent />
-    <div className="tech-icons-container">
-      <div className="tech-icons-scroll">
-        {/* Duplicating icons for seamless infinite scrolling */}
-        {[...icons, ...icons].map((icon, index) => (
-          <img key={index} src={icon.src} alt={icon.alt} className="tech-icon" />
-        ))}
-      </div>
-    </div>
+      <IconsSection />
+      
       
       {/* Skills Section */}
       <h2 className="skills-title">Skills</h2>
@@ -161,6 +156,7 @@ const About = () => {
   <button className="download-btn" onClick={handleDownload}>
     Download Resume
   </button>
+
 </footer>
     </div>
   );
