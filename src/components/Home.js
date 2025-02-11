@@ -9,7 +9,7 @@ const Home = () => {
     {
       date: "Jan 21 2025",
       readTime: "6 min read",
-      title: "The ABC of design: Five principles of graphic design",
+      title: "The ABC of design: Five principles of designers",
       description:
         "Design principles underpin everything we create as designers. ",
         link: "/blog1",
@@ -32,7 +32,7 @@ description:
     {
       date: "Sep 22 2021",
 readTime: "3 min read",
-title: "Use Case vs User Story: Key Differences in UX Explained",
+title: "Use Case vs User Story: Key Differences ",
 description: "No more typing the same thing over and over again with Code Snippets!",
 link: "/blog4",
     },
