@@ -7,6 +7,7 @@ import pfma from "../assets/pfma.avif"
 import pfma1 from "../assets/pfma1.avif";
 import pfma2 from "../assets/pfma2.avif";
 import pfma3 from "../assets/pfma3.avif";
+import pfma6 from "../assets/pfma6.jpg";
 
 
 
@@ -87,16 +88,10 @@ const Personalfin = () => {
             Following the redesign, employee engagement with the intranet increased by 45%, and the time spent on the platform rose by 30%. The new interface and improved content organization made it easier for employees to find information and collaborate. Feedback from employees was highly positive, with satisfaction ratings increasing from 3.5 to 4.6 stars.
             </p>
             <img 
-  src={pfma1} 
+  src={pfma} 
   alt="pfma" 
   className="hero-image" 
   style={{ display: "block", margin: "0 auto",marginBottom:"20px" }} 
-/>
-<img 
-  src={pfma2} 
-  alt="pfma" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
 />
 
           </div>
@@ -112,7 +107,7 @@ const Personalfin = () => {
                 
             </ul>
             <img 
-  src={pfma3} 
+  src={pfma6} 
   alt="pfma" 
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
