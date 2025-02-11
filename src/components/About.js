@@ -3,6 +3,7 @@ import React,{ useState,useEffect } from "react";
 import "./AboutPage.css";
 import IconsSection from "./IconsSection";
 import ReferenceComponent from "./ReferenceComponent";
+import pfma from "../assets/pfma.avif"
 
 
 const About = () => {
@@ -81,6 +82,13 @@ const About = () => {
       image: "https://framerusercontent.com/images/RiTU9qf3PRWgOcVHeGxgRtWvgLY.png",
       link: "https://deignfromharibaskar.framer.website/work/developing-a-mobile-health-tracking-app",
     },
+    {
+      title: "Personal Finance Management Application",
+      description:
+        "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",
+      image: pfma,
+      link: "https://deignfromharibaskar.framer.website/work/developing-a-mobile-health-tracking-app",
+    },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -131,7 +139,7 @@ const About = () => {
         onClick={() => handleProjectClick(projectFrames[currentIndex].link)}
       >
         <div className="frame-content">
-          <h2>{projectFrames[currentIndex].title}</h2>
+          <h1>{projectFrames[currentIndex].title}</h1>
           <p>{projectFrames[currentIndex].description}</p>
         </div>
         <img
