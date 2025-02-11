@@ -8,6 +8,12 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bgcolor);
   color: white;
+
+  font-family: 'Inter', 'Roboto', 'Arial', sans-serif; /* Modern sans-serif font */
+  font-size: 16px; /* Readable font size */
+  font-weight: 400; /* Normal font weight */
+  line-height: 1.6; /* Good spacing for readability */
+
 }
 
 :root {
@@ -85,9 +91,10 @@ body {
 }
 
 .description {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 12px;
+  line-height: 26px;
   text-align: justify;
+  
 }
 
 .div1 {
@@ -227,9 +234,22 @@ body {
 
 
 .div3 li.active {
-  color: var(--white);
+  color: var(--sptext);
   font-weight: bold;
+  transform: scale(1.02)
  
+}
+
+.div3 li.active:hover{
+  color: var(--sptext);
+ cursor: pointer;
+ transform: scale(1.02);
+}
+
+.div3 li.subactive:hover{
+  color: var(--sptext);
+ cursor: pointer;
+ transform: scale(1.02);
 }
 .div3  ul .subactive{
   color: var(--white);

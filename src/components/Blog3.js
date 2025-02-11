@@ -74,7 +74,7 @@ Alignment in design affects how users scan, navigate, and perceive information. 
 
        
 
-          <div ref={(el) => (sectionRefs.current["Get a mentor"] = el)} className="Repetition">
+          <div ref={(el) => (sectionRefs.current["Get a mentor"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Get a mentor</h2>
             <p className="content-p">
             With repetition we reuse similar or identical elements throughout a design such as colour, patterns, typography, textures, shapes and more. It can be used to create a sense of consistency, unity, and emphasis, or we can use repetition to help reinforce an idea and bring together different elements in a design.   
