@@ -3,18 +3,18 @@ import "./ProjectPage.css";
 
 const projects = [
   {
-    title: "Bodhi - Ignite learning Ignite success",
+    title: "Bodhi Tutor App - Ignite learning Ignite success",
     image: require("../assets/bodhi.png"),
     description:
-      "A web app to analyze whether an opinion on a specific topic is positive or negative based on recent tweets using Natural Language Processing.",
+      "The Tutor App connects students and tutors seamlessly with an easy-to-use platform for scheduling and managing sessions. It supports academic subjects, skill-based learning, and test preparation with tailored solutions.",
     tech: ["Figma", "Framer"],
     link: "/creative",
   },
   {
-    title: "IRCTC Platform",
+    title: "IRCTC Platform: Simplifying Railway Travel in India",
     image: require("../assets/irctc.PNG"),
     description:
-      "Review of the app to highlight the mismatches and present probable solutions, along with new features.",
+      "The IRCTC platform is designed as India’s official portal for train ticket booking, catering, and tourism. It offers PNR checks, train schedules, and meal pre-booking for seamless travel..",
     tech: ["Figma", "Framer"],
     link: "/IRCTC",
   },
@@ -27,7 +27,7 @@ const projects = [
     link: "/shareride",
   },
   {
-    title: "Personal Finance Management Application",
+    title: "Advanced Personal Finance Management Application",
     image: require("../assets/pfma.avif"),
     description:
       "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",

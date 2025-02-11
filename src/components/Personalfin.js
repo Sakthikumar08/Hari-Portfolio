@@ -139,7 +139,7 @@ const Personalfin = () => {
 
           <h3>
           <ul>
-            <li className={activeSection === "Challenge" ? "active" : ""} onClick={() => scrollToSection("Challenge")}>Challenge</li>
+          <li className={activeSection === "Problem Statement" ? "active" : ""} onClick={() => scrollToSection("Problem Statement")}>Problem Statement</li>
             <li className={activeSection === "Results" ? "active" : ""} onClick={() => scrollToSection("Results")}>Results</li>
             <li className={activeSection === "Process" ? "active" : ""} onClick={() => scrollToSection("Process")}>Process</li>
             <li className={activeSection === "Conclusion" ? "active" : ""} onClick={() => scrollToSection("Conclusion")}>Conclusion</li>

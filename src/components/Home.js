@@ -33,7 +33,7 @@ const Home = () => {
           title: "Bodhi - Ignite learning Ignite success",
           image: require("../assets/bodhi.png"), 
           description:
-            "A web app to analyze whether an opinion on a specific topic is positive or negative based on recent tweets using Natural Language Processing.",
+            "The Tutor App connects students and tutors seamlessly with an easy-to-use platform for scheduling and managing sessions. It supports academic subjects, skill-based learning, and test preparation with tailored solutions.",
           tech: ["Figma", "Framer"],
           link: "/creative"
         },
