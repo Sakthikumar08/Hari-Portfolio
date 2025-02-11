@@ -38,20 +38,28 @@ const Home = () => {
           link: "/creative"
         },
         {
-         title: "project2",
-            image: require("../assets/bodhi.png"), 
+         title: "IRCTC Platform: Simplifying Railway Travel in India",
+            image: require("../assets/irctc.PNG"), 
             description:
-              "A web app to analyze whether an opinion on a specific topic is positive or negative based on recent tweets using Natural Language Processing.",
+              "The IRCTC platform is designed as India’s official portal for train ticket booking, catering, and tourism. It offers PNR checks, train schedules, and meal pre-booking for seamless travel.",
             tech: ["Figma", "Framer"],
             link: "/creative"
           },{
-            title: "project3",
-               image: require("../assets/bodhi.png"), 
+            title: "Share Ride App: Smarter, Greener, and Convenient Rides",
+               image: require("../assets/shareride.PNG"), 
                description:
-                 "A web app to analyze whether an opinion on a specific topic is positive or negative based on recent tweets using Natural Language Processing.",
+                 "The Share Ride App connects travelers heading in the same direction, making commuting cost-effective and eco-friendly. It ensures easy and secure ride-sharing for work, college, or long-distance trips.",
                tech: ["Figma", "Framer"],
                link: "/creative"
              },
+             {
+              title: "Personal Finance Management Application",
+                 image: require("../assets/pfma.avif"), 
+                 description:
+                   "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",
+                 tech: ["Figma", "Framer"],
+                 link: "/creative"
+               },
           
     ];
 
@@ -214,6 +222,7 @@ Expertise extends to Frontend-Development enabling me to create both aesthetical
                         <div className="about-image">
                             <img src={profile} alt="Hari Baskar" />
                         </div>
+                        <br />
                     </div>
                 </motion.div>
 
