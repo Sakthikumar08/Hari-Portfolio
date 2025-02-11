@@ -159,7 +159,8 @@ win-win scenario.
 
           <div ref={(el) => (sectionRefs.current["Project Overview"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Project Overview</h2>
-            <p className="content-p">
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
+            <p style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify" }} className="content-p">
             Finding tutor is a very common problem in our country. Students are
 struggling to get tutor who can accommodate the student’s schedule
 and finding a tutor with expertise in a specific subject or topic, 
@@ -176,17 +177,27 @@ User Interface design of the app here.
   src={bodhi3} 
   alt="bodhi" 
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
+  style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
 />
+</div>
 
           </div>
 
           <div ref={(el) => (sectionRefs.current["Problem Statement"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Problem Statement</h2>
-            <ul>
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
+            <ul style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify" }}>
       <li >Limited Tutor Options: Without a tutor finding app, rural students may have fewer options when it comes to selecting a tutor with expertise in specific subjects or topics.</li>
       <li >Travel Constraints: Travelling to urban areas for tutoring sessions can be time-consuming and expensive.</li>
       <li >Lack of Reviews and Ratings: Without an app, students may lack access to reviews and ratings from previous students, making it challenging to assess a tutor’s quality.</li>
+      </ul>
+      <img 
+  src={bodhi5} 
+  alt="bodhi5" 
+  className="hero-image" 
+  style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
+/></div>
+      <ul>
       <li >Payment Disputes: Billing issues or disputes over fees can create tension between students and tutors, affecting the overall experience.</li>
       <li >Subject Availability: In some cases, students may struggle to find tutors for niche areas in subjects or specialized areas of study.</li>
       <li >Geographical Isolation: Rural communities are often spread out, making it difficult for students to find tutors who are within a reasonable distance for in-person sessions.</li>
@@ -195,18 +206,14 @@ User Interface design of the app here.
       <li >Educational Inequality: The lack of access to educational resources, including tutor finding apps, can contribute to educational inequality between rural and urban students.</li>
       <li >Progress Tracker: Students' progress is not known during tuition.</li>
     </ul>
-<img 
-  src={bodhi5} 
-  alt="bodhi5" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
+
 
           </div>
 
           <div ref={(el) => (sectionRefs.current["Possible Solution"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Possible Solution</h2>
-            <ul>
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
+            <ul style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify" }}>
       <li >
         Creating a convenient digital platform for finding tuition.
       </li>
@@ -216,6 +223,15 @@ User Interface design of the app here.
       <li >
         Offer support for local languages and dialects within the app to make it accessible to students who may not be proficient in the national language.
       </li>
+      
+      </ul>
+      <img 
+  src={bodhi6} 
+  alt="bodhi6" 
+  className="hero-image" 
+  style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
+/></div>
+      <ul>
       <li >
         Develop offline resource libraries within the app, including educational materials, practice tests, and study guides, that rural students can access without an internet connection.
       </li>
@@ -238,12 +254,7 @@ User Interface design of the app here.
         To get to know about the teaching style of the tutor by providing a demo class to students.
       </li>
     </ul>
-<img 
-  src={bodhi6} 
-  alt="bodhi6" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
+
 
           </div>
 

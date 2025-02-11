@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import bodhi1 from "../assets/irctc.PNG";
 import bodhi2 from "../assets/irctc2.PNG";
 import bodhi4 from "../assets/irctc3.PNG";
-import irctc4 from "../assets/irctc4.PNG";
+import irctc4 from "../assets/irctc43.PNG";
 import irctc5 from "../assets/irctc5.PNG";
 import irctc6 from "../assets/irctc6.PNG";
 import bodhi5 from "../assets/irctc7.PNG";
@@ -46,35 +46,58 @@ import "./CreativePage.css";
 
 const Irctc = () => {
   const [activeSection, setActiveSection] = useState("");
-  const sectionRefs = useRef({});
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100;
-      Object.keys(sectionRefs.current).forEach((id) => {
-        const element = sectionRefs.current[id];
-        if (
-          element &&
-          element.offsetTop <= scrollPosition &&
-          element.offsetTop + element.offsetHeight > scrollPosition
-        ) {
-          setActiveSection(id);
+    const [activeSubsection, setActiveSubsection] = useState(null);
+    const sectionRefs = useRef({});
+    const subsectionRefs = useRef({});
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY + 200;
+        
+        let currentSubsection = null;
+        let foundSection = false;
+  
+        Object.keys(sectionRefs.current).forEach((id) => {
+          const element = sectionRefs.current[id];
+          if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.offsetHeight > scrollPosition) {
+            setActiveSection(id);
+            foundSection = true;
+          }
+        });
+  
+        Object.keys(subsectionRefs.current).forEach((id) => {
+          const element = subsectionRefs.current[id];
+          if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.offsetHeight > scrollPosition) {
+            currentSubsection = id;
+          }
+        });
+  
+        if (currentSubsection) {
+          setActiveSubsection(currentSubsection);
+        } else if (!foundSection) {
+          setActiveSubsection(null);
         }
-      });
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+  
+    const scrollToSection = (sectionId) => {
+      setActiveSection(sectionId);
+      const element = sectionRefs.current[sectionId];
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId) => {
-    setActiveSection(sectionId);
-    const element = sectionRefs.current[sectionId];
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+  
+    const scrollToSubsection = (subsectionId) => {
+      setActiveSubsection(subsectionId);
+      const element = subsectionRefs.current[subsectionId];
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    };
   return (
     <div className="creative-page">
       <div className="div1">
@@ -115,7 +138,8 @@ const Irctc = () => {
         <div className="div2">
           <div ref={(el) => (sectionRefs.current["What motivated me to began?"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">What motivated me to began?</h2>
-            <p className="content-p">
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
+            <p style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify" }} className="content-p">
             The motivation for initiating a heuristic evaluation and redesign of the IRCTC websites
 stems from recognition of usability challenges and inefficiencies. Identifying
 issues such as complex navigation, slow performance, and potential user
@@ -129,27 +153,29 @@ with the IRCTC websites.
   src={irctc4} 
   alt="bodhi" 
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
+  style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
+/></div>
           </div>
 
           <div ref={(el) => (sectionRefs.current["Problem Statement"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Problem Statement</h2>
-            <p className="content-p">
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
+            <p style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify" }} className="content-p">
             The IRCTC Website currently faces several usability issues that hinder user
 experience and satisfaction. Users encounter confusion due to inconsistent
 design elements, such as the placements of features and the absence of 
 proper categorization. Additionally, the unavailability of an SOS feature 
 could be a notable gap in ensuring the well-being and prompt support for 
 users. Consideration should be given to incorporating such features to
-enhance the overall safety measures of the IRCTC website. 
+enhance the overall safety measures of the IRCTC website.     
             </p>
             <img 
   src={irctc5} 
   alt="bodhi" 
   className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
+  style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
+/></div>
+            
 
           </div>
           <div ref={(el) => (sectionRefs.current["Design Thinking Process"] = el)} className="section">
@@ -171,7 +197,8 @@ enhance the overall safety measures of the IRCTC website.
                 alt="bodhi5" 
                 className="hero-image" 
                 style={{ display: "block", margin: "0 auto" }} 
-                />
+                /></div>
+                <div ref={(el) => (subsectionRefs.current["Visibility of system status"] = el)}>
             <h3>Principle :</h3>
             <h3>Visibility of system status</h3>
             <p className="content-p">
@@ -184,7 +211,8 @@ enhance the overall safety measures of the IRCTC website.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
+<div ref={(el) => (subsectionRefs.current["Match between system and real world"] = el)}>
             <h3>Match between system and real world</h3>
             <p className="content-p">
             “The system should speak the user’s language, using, phrases,
@@ -197,8 +225,9 @@ system-oriented terms.”
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
-           
+</div>
+<div ref={(el) => (subsectionRefs.current["User control and freedom"] = el)}>
+  
             <h3>User control and freedom</h3>
             <p className="content-p">
             “System’s interface design allows users to easily undo or correct their 
@@ -212,6 +241,8 @@ behavior”.
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Error Prevention"] = el)}>
 
 
             <h3>Error Prevention</h3>
@@ -226,9 +257,11 @@ from taking actions that could lead to errors”
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Help user recognize"] = el)}>
 
 
-            <h3>Help user recognize, diagnose and recover from errors.</h3>
+            <h3>Help user recognize, diagnose and recover from errors</h3>
             <p className="content-p">
             “Error messages should be expressed in plain language (no codes),
 precisely indicate the problem, and constructively suggest a solution.
@@ -242,7 +275,8 @@ solution.”
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
+<div ref={(el) => (subsectionRefs.current["Consistency and Standards"] = el)}>
 
             <h3>Consistency and Standards</h3>
             <p className="content-p">
@@ -255,7 +289,8 @@ solution.”
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-
+</div>
+<div ref={(el) => (subsectionRefs.current["Reorganization rather than recall"] = el)}>
 
             <h3>Reorganization rather than recall</h3>
             <p className="content-p">
@@ -270,6 +305,8 @@ users of the system should be visible or easy retrievable.”
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Flexibility and Efficiency of use"] = el)}>
 
 
             <h3>Flexibility and Efficiency of use</h3>
@@ -283,6 +320,8 @@ users of the system should be visible or easy retrievable.”
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
+<div ref={(el) => (subsectionRefs.current["Aesthetic and minimalist design"] = el)}>
 
 
             <h3>Aesthetic and minimalist design</h3>
@@ -298,8 +337,9 @@ visibility.”
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
+</div>
 
-
+<div ref={(el) => (subsectionRefs.current["Help and Documentation"] = el)}>
             <h3>Help and Documentation</h3>
             <p className="content-p">
             “Help should be easily accessible and include all relevant data that
@@ -311,7 +351,7 @@ visibility.”
   className="hero-image" 
   style={{ display: "block", margin: "0 auto" }} 
 />
-          </div>
+</div>
 
           <div ref={(el) => (sectionRefs.current["Solution Statement"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Solution Statement</h2>
@@ -441,7 +481,7 @@ are Business travelers. I asked them set of 5 questions to gather their insights
 
           </div>
 
-          <div ref={(el) => (sectionRefs.current["Google Playstore Reviews "] = el)} className="section">
+          <div ref={(el) => (sectionRefs.current["Google Playstore Reviews"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Google Playstore Reviews </h2>
 
             
@@ -741,27 +781,65 @@ process, combining convenience and choice on our user friendly platform.
 
           <h3>
           <ul>
-            <li onClick={() => scrollToSection("Why I Started This Project")}>Why I Started This Project</li>
-            <li onClick={() => scrollToSection("Project Overview")}>Project Overview</li>
-            <li onClick={() => scrollToSection("Problem Statement")}>Problem Statement</li>
-            <li onClick={() => scrollToSection("Possible Solution")}>Possible Solution</li>
-            <li onClick={() => scrollToSection("Design Process")}>Design Process</li>
-            <li onClick={() => scrollToSection("Project Timeline")}>Project Timeline</li>
-            <li onClick={() => scrollToSection("Responses of Qualitative & Quantitative Analysis")}>Responses of Qualitative & Quantitative Analysis</li>
-            <li onClick={() => scrollToSection("User Persona")}>User Persona</li>
-            <li onClick={() => scrollToSection("Empathy Map")}>Empathy Map</li>
-            <li onClick={() => scrollToSection("Competitive Analysis")}>Competitive Analysis</li>
-            <li onClick={() => scrollToSection("User Journey Map")}>User Journey Map</li>
-            <li onClick={() => scrollToSection("Information Architecture")}>Information Architecture</li>
-            <li onClick={() => scrollToSection("User Flow")}>User Flow</li>
-            <li onClick={() => scrollToSection("Task Flow")}>Task Flow</li>
-            <li onClick={() => scrollToSection("Low Fidelity WireFrame")}>Low Fidelity WireFrame</li>
-            <li onClick={() => scrollToSection("Style Guide")}>Style Guide</li>
-            <li onClick={() => scrollToSection("Medium Fidelity WireFrame")}>Medium Fidelity WireFrame</li>
-            <li onClick={() => scrollToSection("Usability Testing Result")}>Usability Testing Result</li>
-            <li onClick={() => scrollToSection("Screen Details")}>Screen Details</li>
-            <li onClick={() => scrollToSection("All Mobile Screen")}>All Mobile Screen</li>
-            <li onClick={() => scrollToSection("website Screen")}>website Screen</li>
+            <li className={activeSection === "What motivated me to began?" ? "active" : ""} onClick={() => scrollToSection("What motivated me to began?")}>What motivated me to began?</li>
+            <li className={activeSection === "Problem Statement" ? "active" : ""} onClick={() => scrollToSection("Problem Statement")}>Problem Statement</li>
+            <li className={activeSection === "Design Thinking Process" ? "active" : ""} onClick={() => scrollToSection("Design Thinking Process")}>Design Thinking Process</li>
+            <li className={activeSection === "Heuristic Evaluation" ? "active" : ""} onClick={() => scrollToSection("Heuristic Evaluation")}>Heuristic Evaluation</li>
+            <ul>
+          
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Visibility of system status" ? "subactive" : ""} onClick={() => scrollToSubsection("Visibility of system status")}>
+              Visibility of system status
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Match between system and real world" ? "subactive" : ""} onClick={() => scrollToSubsection("Match between system and real world")}>
+            Match between system and real world
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "User control and freedom" ? "subactive" : ""} onClick={() => scrollToSubsection("User control and freedom")}>
+              User control and freedom
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Error Prevention" ? "subactive" : ""} onClick={() => scrollToSubsection("Error Prevention")}>
+              Error Prevention
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Help user recognize" ? "subactive" : ""} onClick={() => scrollToSubsection("Help user recognize")}>
+              Help user recognize
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Consistency and Standards" ? "subactive" : ""} onClick={() => scrollToSubsection("Consistency and Standards")}>
+              Consistency and Standards
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Reorganization rather than recall" ? "subactive" : ""} onClick={() => scrollToSubsection("Reorganization rather than recall")}>
+              Reorganization rather than recall
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Flexibility and Efficiency of use" ? "subactive" : ""} onClick={() => scrollToSubsection("Flexibility and Efficiency of use")}>
+              Flexibility and Efficiency of use
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Aesthetic and minimalist design" ? "subactive" : ""} onClick={() => scrollToSubsection("Aesthetic and minimalist design")}>
+              Aesthetic and minimalist design
+            </li>
+            <li style={{paddingLeft:"12px"}} className={activeSubsection === "Help and Documentation" ? "subactive" : ""} onClick={() => scrollToSubsection("Help and Documentation")}>
+              Help and Documentation
+            </li>
+            </ul>
+            <li className={activeSection === "Solution Statement" ? "active" : ""} onClick={() => scrollToSection("Solution Statement")}>Solution Statement</li>
+            <li className={activeSection === "Design Timeline (19-01-2024 to 28-01-2024)" ? "active" : ""} onClick={() => scrollToSection("Design Timeline (19-01-2024 to 28-01-2024)")}>Design Timeline (19-01-2024 to 28-01-2024)</li>
+            <li className={activeSection === "User Research" ? "active" : ""} onClick={() => scrollToSection("User Research")}>User Research</li>
+            <li className={activeSection === "Target Audience" ? "active" : ""} onClick={() => scrollToSection("Target Audience")}>Target Audience</li>
+            <li className={activeSection === "Guerrilla Research" ? "active" : ""} onClick={() => scrollToSection("Guerrilla Research")}>Guerrilla Research</li>
+            <li className={activeSection === "Google Playstore Reviews" ? "active" : ""} onClick={() => scrollToSection("Google Playstore Reviews")}>Google Playstore Reviews</li>
+            <li className={activeSection === "Result" ? "active" : ""} onClick={() => scrollToSection("Result")}>Result</li>
+            <li className={activeSection === "User Persona" ? "active" : ""} onClick={() => scrollToSection("User Persona")}>User Persona</li>
+            <li className={activeSection === "Empathy mapping" ? "active" : ""} onClick={() => scrollToSection("Empathy mapping")}>Empathy mapping</li>
+            <li className={activeSection === "Information Architecture" ? "active" : ""} onClick={() => scrollToSection("Information Architecture")}>Information Architecture</li>
+            <li className={activeSection === "Color Used" ? "active" : ""} onClick={() => scrollToSection("Color Used")}>Color Used</li>
+            <li className={activeSection === "Typography" ? "active" : ""} onClick={() => scrollToSection("Typography")}>Typography</li>
+            <li className={activeSection === "Iconography" ? "active" : ""} onClick={() => scrollToSection("Iconography")}>Iconography</li>
+            <li className={activeSection === "Low Fidelity Wireframes" ? "active" : ""} onClick={() => scrollToSection("Low Fidelity Wireframes")}>Low Fidelity Wireframes</li>
+            <li className={activeSection === "Hi-Fidelity Design With Major Correction" ? "active" : ""} onClick={() => scrollToSection("Hi-Fidelity Design With Major Correction")}>Hi-Fidelity Design With Major Correction</li>
+            <li className={activeSection === "SOS Emergency Screen" ? "active" : ""} onClick={() => scrollToSection("SOS Emergency Screen")}>SOS Emergency Screen</li>
+            <li className={activeSection === "Train Selection Screen" ? "active" : ""} onClick={() => scrollToSection("Train Selection Screen")}>Train Selection Screen</li>
+            <li className={activeSection === "Fare Alert Screen" ? "active" : ""} onClick={() => scrollToSection("Fare Alert Screen")}>Fare Alert Screen</li>
+            <li className={activeSection === "Ticket Review Screen" ? "active" : ""} onClick={() => scrollToSection("Ticket Review Screen")}>Ticket Review Screen</li>
+            <li className={activeSection === "Traveler Details Screen" ? "active" : ""} onClick={() => scrollToSection("Traveler Details Screen")}>Traveler Details Screen</li>
+            <li className={activeSection === "Payment Screen" ? "active" : ""} onClick={() => scrollToSection("Payment Screen")}>Payment Screen</li>
+
           </ul>
           </h3>
         </div>
