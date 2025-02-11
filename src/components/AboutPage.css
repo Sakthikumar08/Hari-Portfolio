@@ -84,7 +84,7 @@
   border-radius: 12px;
   padding: 10px;
   background: black;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .tech-icon:hover {
@@ -96,7 +96,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-8%);
   }
 }
 
@@ -170,12 +170,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 30vh;
 
 }
 
 .thank-you-box {
-  margin-top: 10px;
+  margin-top: 5px;
   background: #2b3a47;
   color: white;
   padding: 40px 60px;

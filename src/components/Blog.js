@@ -5,41 +5,30 @@ const blogPosts = [
   {
     date: "Jan 21 2025",
     readTime: "6 min read",
-    title: "2024 Retrospective",
+    title: "The ABC of design: Five principles of graphic design",
     description:
-      "A late retrospective on 2024. Moving to Bali, stepping outside my comfort zone, and embracing a year of growth and new experiences.",
+      "Design principles underpin everything we create as designers. ",
   },
   {
     date: "Apr 2 2024",
     readTime: "3 min read",
-    title: "Unleash Your Dev Blog: Write More with GitHub Issues as Your CMS",
+    title: "48 essential free resources for graphic designers",
     description:
       "Turn your GitHub Issues into a powerful Next.js blog to write more and publish faster!",
   },
   {
     date: "Jul 18 2022",
     readTime: "2 min read",
-    title: "Code Faster with Vim Shortcuts!",
+    title: "11 ways to improve your graphic design skills",
     description: "Never leave your hands on your keyboard again.",
   },
   {
     date: "Sep 22 2021",
     readTime: "3 min read",
-    title: "Easily Boost Your Productivity With Code Snippets",
+    title: "Use Case vs User Story: Key Differences in UX Explained",
     description: "No more typing the same thing over and over again with Code Snippets!",
   },
-  {
-    date: "Jun 20 2021",
-    readTime: "5 min read",
-    title: "How I Make My First (real) Open Source Contribution",
-    description: "How I contributed to open-source and my thought process behind it.",
-  },
-  {
-    date: "Nov 24 2019",
-    readTime: "6 min read",
-    title: "Why I Learned to Code",
-    description: "The story about how I started learning programming.",
-  },
+  
 ];
 
 function Blog() {
@@ -75,7 +64,7 @@ function Blog() {
             </div>
             <h2 className="blog-heading">{post.title}</h2>
             <p className="blog-desc">{post.description}</p>
-            <a href="#" className="blog-link">
+            <a href={`/blog${index + 1}`} className="blog-link">
               Learn more →
             </a>
           </div>
