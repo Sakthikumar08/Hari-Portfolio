@@ -63,7 +63,7 @@ link: "/blog4",
                link: "/shareride"
              },
              {
-              title: "Personal Finance Management Application",
+              title: "Advanced Personal Finance Management Application",
                  image: require("../assets/pfma.avif"), 
                  description:
                    "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",
