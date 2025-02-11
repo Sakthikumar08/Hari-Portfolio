@@ -5,28 +5,38 @@ import profile from "../assets/image.avif";
 
 
 const Home = () => {
-    const articles = [
-        {
-          title: "2024 Retrospective",
-          date: "January 21 2025",
-          readTime: "6 min read",
-        },
-        {
-          title: "Unleash Your Dev Blog: Write More with GitHub Issues as Your CMS",
-          date: "April 2 2024",
-          readTime: "3 min read",
-        },
-        {
-          title: "Code Faster with Vim Shortcuts!",
-          date: "July 18 2022",
-          readTime: "2 min read",
-        },
-        {
-          title: "Easily Boost Your Productivity With Code Snippets",
-          date: "September 22 2021",
-          readTime: "3 min read",
-        },
-    ];
+  const articles = [
+    {
+      date: "Jan 21 2025",
+      readTime: "6 min read",
+      title: "The ABC of design: Five principles of graphic design",
+      description:
+        "Design principles underpin everything we create as designers. ",
+        link: "/blog1",
+    },
+    {
+      date: "Apr 2 2024",
+readTime: "3 min read",
+title: "48 essential free resources for graphic designers",
+description:
+  "Turn your GitHub Issues into a powerful Next.js blog to write more and publish faster!",
+  link: "/blog2",
+    },
+    {
+      date: "Jul 18 2022",
+      readTime: "2 min read",
+      title: "11 ways to improve your graphic design skills",
+      description: "Never leave your hands on your keyboard again.",
+      link: "/blog3",
+    },
+    {
+      date: "Sep 22 2021",
+readTime: "3 min read",
+title: "Use Case vs User Story: Key Differences in UX Explained",
+description: "No more typing the same thing over and over again with Code Snippets!",
+link: "/blog4",
+    },
+];
     
     const projects = [
         {
@@ -43,14 +53,14 @@ const Home = () => {
             description:
               "The IRCTC platform is designed as India’s official portal for train ticket booking, catering, and tourism. It offers PNR checks, train schedules, and meal pre-booking for seamless travel.",
             tech: ["Figma", "Framer"],
-            link: "/creative"
+            link: "/IRCTC"
           },{
             title: "Share Ride App: Smarter, Greener, and Convenient Rides",
                image: require("../assets/shareride.PNG"), 
                description:
                  "The Share Ride App connects travelers heading in the same direction, making commuting cost-effective and eco-friendly. It ensures easy and secure ride-sharing for work, college, or long-distance trips.",
                tech: ["Figma", "Framer"],
-               link: "/creative"
+               link: "/shareride"
              },
              {
               title: "Personal Finance Management Application",
@@ -58,7 +68,7 @@ const Home = () => {
                  description:
                    "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",
                  tech: ["Figma", "Framer"],
-                 link: "/creative"
+                 link: "/Personal-fin-app"
                },
           
     ];
@@ -285,14 +295,15 @@ Expertise extends to Frontend-Development enabling me to create both aesthetical
                     </div>
                     <div className="articles-grid">
                         {articles.map((article, index) => (
-                            <div key={index} className="article-card">
+                          <a key={index} href={article.link} className="article-link" target="_blank" rel="noopener noreferrer">
+                            <div  className="article-card">
                                 <h3 className="article-title">{article.title}</h3>
                                 <p className="article-meta">{article.date} • {article.readTime}</p>
                             </div>
+                            </a>
                         ))}
                     </div>
                 </motion.div>
-
                 {/* Contact Section */}
                 <motion.div 
                     className="contact-container"
