@@ -61,7 +61,7 @@ const Project = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <i className="fa-solid fa-magnifying-glass search-icon"></i>
+       
       </div>
       </div>
 

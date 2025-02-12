@@ -752,6 +752,9 @@ body {
     .hero-text{
         font-size: 13.2px;
     }
+    .portfolio-description{
+        font-size: 13px;
+    }
 }
 @media (min-width: 768px) {
     .about-content {
