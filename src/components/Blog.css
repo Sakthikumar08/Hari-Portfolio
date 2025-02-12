@@ -97,3 +97,14 @@ body {
     transform: translateY(-50%);
     color: #bbb;
   }
+  @media (max-width: 768px){
+    .blog-heading {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    .blog-desc {
+      font-size: 15px;
+      color: #ddd;
+    }
+  }
