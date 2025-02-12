@@ -14,6 +14,7 @@
   max-width: 60%;
 }
 
+
 .unique-heading {
   display: flex;
   align-items: center;
@@ -72,4 +73,35 @@
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid white;
+}
+/* Responsive Design */
+@media (max-width: 728px) {
+  .unique-container {
+    flex-direction: column;
+    text-align: left;
+    
+    padding: 0;
+  }
+
+  .unique-content {
+    max-width: 100%;
+  }
+
+  .unique-image-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .unique-profile-image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .unique-title {
+    font-size: 36px;
+  }
+
+  .unique-text {
+    font-size: 14px;
+  }
 }

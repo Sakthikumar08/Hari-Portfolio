@@ -28,6 +28,23 @@
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 768px) {
+  .skill-tag {
+    background-color: none;
+    padding: 4px 8px;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .skills-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 1000;
+  }
+}
+
 .skill-tag:hover{
   transform: scale(1.02);
   color: var(--sptext);
@@ -47,6 +64,29 @@
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 15px 0;
+}
+@media (max-width: 768px){
+.experience-title{
+  font-weight: 1000;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.experience-role {
+  font-size: 15px;
+  font-weight: 500;
+}
+.experience-company {
+  font-size: 13px;
+  font-weight: 400;
+}
+.experience-duration {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.experience-item {
+  padding: 10px 0;
+}
+
 }
 
 .experience-role {
@@ -164,6 +204,70 @@
   margin-top: 35px;
   font-weight: 1000;
 }
+@media (max-width: 768px){
+  .frame-title{
+    font-size: 30px;
+  }
+  .frame-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Adjust as needed */
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .frame-card {
+    width: 100%;
+    
+    padding: 10px;
+    border-radius: 8px;
+    background: linear-gradient(to right, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.8));
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  .frame-content {
+    max-width: 60%;
+  }
+  .frame-content h1{
+   font-size: 14px;
+  }
+  .frame-content p{
+   font-size: 11px;
+  }
+  .download-btn {
+    background: var(--sptext);
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .thank-you-box h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .thank-you-box p {
+    font-size: 14px;
+  }
+  .thank-you-box {
+    margin-top: 5px;
+    background: #2b3a47;
+    color: white;
+    padding: 25px 40px;
+    text-align: center;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+}
 
 
 .thank-you-container {
@@ -171,7 +275,6 @@
   justify-content: center;
   align-items: center;
   height: 30vh;
-
 }
 
 .thank-you-box {

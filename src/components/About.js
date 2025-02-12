@@ -64,7 +64,7 @@ const About = () => {
     {
       title: "Tutor App: Empowering Learning, Anytime, Anywhere",
       description:
-        "The Tutor App is a comprehensive platform designed to connect students and tutors seamlessly. It offers a user-friendly interface for scheduling, attending, and managing tutoring sessions. Whether it's academic subjects, skill-based learning, or test preparation, the app provides tailored solutions to meet diverse learning needs.",
+        "The Tutor App is a comprehensive platform designed to connect students and tutors seamlessly. It offers a user-friendly interface for scheduling, attending, and managing tutoring sessions. Whether it's academic subjects, skill-based learning, or test preparation.",
       image: "https://framerusercontent.com/images/TCPeAZObpHshqcExOUJlnxgSM.png",
       link: "https://deignfromharibaskar.framer.website/work/modernization-of-a-subscription-management-platform",
     },
