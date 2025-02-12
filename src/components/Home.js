@@ -244,7 +244,7 @@ Expertise extends to Frontend-Development enabling me to create both aesthetical
                     viewport={{ once: true, margin: "0px 0px -100px 0px" }}
                 >
                     <motion.h2 className="portfolio-title" variants={itemVariants}>
-                        All Creative<span>Works.</span>
+                        All Creative<span> Works.</span>
                     </motion.h2>
                     <motion.p className="portfolio-subtitle" variants={itemVariants}>
                         Here are some of my projects that I have worked on.

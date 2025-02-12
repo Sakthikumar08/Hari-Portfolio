@@ -75,7 +75,7 @@ body {
 }
 
 .hero-title {
-    font-size: 2.25rem;
+    font-size: 28.9px;
     font-weight: bold;
     color: var(--sptext);
     margin-bottom: 1rem;
@@ -100,11 +100,11 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.9rem;
+    font-size: 28.9px;
     color: var(--text);
     margin-bottom: 1.5rem;
     font-weight: 600;
-    letter-spacing: 0.005px;
+    letter-spacing: -1.6px;
 }
 
 .hero-subtitle span {
@@ -114,9 +114,8 @@ body {
 
 
 .hero-text {
-    font-size: 1.4rem;
+    font-size: 19.8px;
     color: var(--text);
-    letter-spacing: 1px;
 }
 
 .hero-text span {
@@ -696,9 +695,7 @@ body {
 
 
 /* Hero Section */
-.hero-title {
-    font-size: 3rem;
-}
+
 @media (max-width: 768px) {
 
     .hero-subtitle {
@@ -730,7 +727,7 @@ body {
 }
 
 .highlight {
-    font-size: 6rem;
+    font-size: 106.5px;
 }
 
 @media (max-width: 768px) {

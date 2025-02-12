@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./ProjectPage.css";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -83,6 +84,7 @@ const Project = () => {
       </div>
 
       {/* Apply class if only one project is displayed */}
+      
       <motion.div
         className={`projects-grid ${filteredProjects.length === 1 ? "single-result" : ""}`}
         initial={{ opacity: 0, y: 50 }}
@@ -91,6 +93,7 @@ const Project = () => {
       >
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
+            <Link to={project.link} className="project-card-link">
             <motion.div
               key={index}
               className="project-card"
@@ -118,6 +121,7 @@ const Project = () => {
               </div>
               <p className="project-description">{project.description}</p>
             </motion.div>
+            </Link>
           ))
         ) : (
           <motion.p
@@ -130,6 +134,7 @@ const Project = () => {
           </motion.p>
         )}
       </motion.div>
+      
 
       {/* Footer Section */}
       <motion.footer

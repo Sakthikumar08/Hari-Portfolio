@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="navbar1">
       {/* Logo */}
-      <div className="logo1">｛ HARI ｝</div>
+      <Link to="/" className="nav-item1" onClick={toggleMenu}><div className="logo1">｛ HARI ｝</div></Link>
 
       {/* Hamburger / Close Button */}
       <button className="hamburger1" onClick={toggleMenu}>
