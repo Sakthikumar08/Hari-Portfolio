@@ -101,8 +101,8 @@ const Irctc = () => {
   return (
     <div className="creative-page">
       <div className="div1">
-        <div className="imgdiv">
-          <img src={bodhi1} alt="bodhi" className="hero-image" />
+        <div className="imdiv">
+          <img src={bodhi1} alt="bodhi" className="hero-image"  />
           <img src={bodhi2} alt="bodhi" className="hero-image" />
         </div>
         <h1 className="head"  style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700 }}>

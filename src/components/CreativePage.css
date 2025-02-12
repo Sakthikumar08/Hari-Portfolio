@@ -130,7 +130,9 @@ body {
   display: flex;
   flex-direction:row !important;
   gap: 20px;
+  
 }
+
 
 .div {
   border-bottom: 1px solid var(--text);
@@ -154,6 +156,13 @@ body {
   margin-bottom: 15px;
   margin-top: 15px;
 }
+.hero-image {
+  max-width: 580px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  
+}
 
 
 @media (max-width: 728px){
@@ -173,14 +182,13 @@ body {
   .imdiv {
     display: flex;
     flex-direction:column !important;
-    gap: 4px !important;
+    gap: 10px !important;
     align-items: center !important;
   }
   .hero-image {
     width: 250px;
     height: auto;
     margin-bottom: 8px !important;
-    margin-left: 65px;
   
     border-radius: 7px;
   }
@@ -216,12 +224,6 @@ body {
 
 
 
-.hero-image {
-  max-width: 580px;
-  height: auto;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-}
 
 
 .stats-links {
