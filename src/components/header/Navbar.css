@@ -1,12 +1,12 @@
 /* Navbar Container */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space between logo and nav items */
+    justify-content: space-between;
     align-items: center;
     background-color: var(--maincolor);
     padding: 13px 30px;
     border-bottom: 0.5px solid #272727;
-    z-index: 100;
+    z-index: 1000;
     position: relative;
 }
 
@@ -20,8 +20,9 @@
 /* Navbar Items */
 .nav-items {
     display: flex;
-    gap: 15px; /* Space between nav items */
+    gap: 15px;
     align-items: center;
+    list-style: none;
 }
 
 /* Individual Nav Item */
@@ -39,26 +40,29 @@
     border-radius: 5px;
 }
 
-/* Hamburger Menu - Hidden on Large Screens */
+/* Hamburger Menu */
 .hamburger {
     display: none;
     font-size: 24px;
     background: none;
     border: none;
-    color: white;
+    color: var(--white);
     cursor: pointer;
 }
 
-/* Responsive Design */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
     /* Show Hamburger Icon */
     .hamburger {
         display: block;
+        position: absolute;
+        top: 15px;
+        right: 30px;
     }
 
     /* Hide Nav Items Initially */
     .nav-items {
-        display: none;
+        display: none;  /* Ensures the menu is hidden by default */
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -67,6 +71,7 @@
         width: 100%;
         text-align: center;
         padding: 20px 0;
+        transition: all 0.3s ease-in-out;
     }
 
     /* Show Navigation When Active */

@@ -106,8 +106,9 @@ link: "/blog4",
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 }
     };
-
+ 
     return (
+      
         <div>
             <div className="content">
                 {/* Hero Section */}
