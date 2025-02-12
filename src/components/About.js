@@ -1,13 +1,11 @@
-import React,{ useState,useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import "./AboutPage.css";
 import IconsSection from "./IconsSection";
 import ReferenceComponent from "./ReferenceComponent";
-import pfma from "../assets/pfma.avif"
-
+import pfma from "../assets/pfma.avif";
 
 const About = () => {
-  
   const skills = [
     "UI/UX Design",
     "Mobile App Design",
@@ -29,7 +27,6 @@ const About = () => {
     "Front-End Development",
   ];
 
-  ;
   const experiences = [
     {
       role: "UX / UI Designer",
@@ -47,12 +44,12 @@ const About = () => {
       duration: "Dec 2019 - Dec 2021",
     },
   ];
+
   const handleDownload = () => {
     window.open("https://drive.google.com/file/d/1-k1eAakCr_6EJTQHYoLJEfgyXiur8GcN/view?usp=drive_link", "_blank");
   };
-  
+
   const icons = [
-    
     { src: "https://framerusercontent.com/images/CtawTrUQ7exjArnxRI2z0j5lipQ.png", alt: "Html" },
     { src: "https://framerusercontent.com/images/0ttqcWxFoLG4q71tGnY1jF6D3I.png", alt: "Adobe XD" },
     { src: "https://framerusercontent.com/images/8lvtN5VohbrIXBQfcwrGaZPFIXs.png", alt: "Adobe Illustrator" },
@@ -60,6 +57,7 @@ const About = () => {
     { src: "https://framerusercontent.com/images/4S3jy7RUc36K4vCFKUPh2LY9qK0.png", alt: "Figma" },
     { src: "https://framerusercontent.com/images/l3L1wNlg26qsR2gchTV8sBvyOt4.png", alt: "CSS" },
   ];
+
   const projectFrames = [
     {
       title: "Tutor App: Empowering Learning, Anytime, Anywhere",
@@ -90,6 +88,7 @@ const About = () => {
       link: "/Personal-fin-app",
     },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -104,54 +103,100 @@ const About = () => {
     window.open(url, "_blank"); // Open the link in a new tab
   };
 
- 
   return (
     <div className="skills-container">
-
-    <ReferenceComponent />
+      <ReferenceComponent />
       <IconsSection />
-      
-      
+
       {/* Skills Section */}
-      <h2 className="skills-title">Skills</h2>
-      <div className="skills-list">
+      <motion.h2
+        className="skills-title"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Skills
+      </motion.h2>
+      <motion.div
+        className="skills-list"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
         {skills.map((skill, index) => (
-          <div key={index} className="skill-tag">{skill}</div>
+          <motion.div
+            key={index}
+            className="skill-tag"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {skill}
+          </motion.div>
         ))}
-       
-      </div>
+      </motion.div>
 
       {/* Experience Section */}
-      <div className="experience-section">
+      <motion.div
+        className="experience-section"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.4 }}
+      >
         <h2 className="experience-title">Experience</h2>
         {experiences.map((exp, index) => (
-          <div key={index} className="experience-item">
+          <motion.div
+            key={index}
+            className="experience-item"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <div className="experience-role">{exp.role}</div>
             <div className="experience-company">{exp.company}</div>
             <div className="experience-duration">{exp.duration}</div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-      <h2 className="frame-title">Projects</h2>
-      <div className="frame-container">
-      <div
-        className="frame-card"
-        onClick={() => handleProjectClick(projectFrames[currentIndex].link)}
+      </motion.div>
+
+      {/* Projects Section */}
+      <motion.h2
+        className="frame-title"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
       >
-        <div className="frame-content">
-          <h1>{projectFrames[currentIndex].title}</h1>
-          <p>{projectFrames[currentIndex].description}</p>
-        </div>
-        <img
-          src={projectFrames[currentIndex].image}
-          alt={projectFrames[currentIndex].title}
-          className="frame-image"
-        />
-      </div>
-    </div>
+        Projects
+      </motion.h2>
+      <motion.div
+        className="frame-container"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.8 }}
+      >
+        <motion.div
+          className="frame-card"
+          onClick={() => handleProjectClick(projectFrames[currentIndex].link)}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <div className="frame-content">
+            <h1>{projectFrames[currentIndex].title}</h1>
+            <p>{projectFrames[currentIndex].description}</p>
+          </div>
+          <img
+            src={projectFrames[currentIndex].image}
+            alt={projectFrames[currentIndex].title}
+            className="frame-image"
+          />
+        </motion.div>
+      </motion.div>
 
       {/* Thank You Section */}
-      <div className="thank-you-container">
+      <motion.div
+        className="thank-you-container"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
         <div className="thank-you-box">
           <h2>Thank you!</h2>
           <p>
@@ -159,13 +204,19 @@ const About = () => {
             <a href="mailto:haribaskarhb1994@gmail.com">haribaskarhb1994@gmail.com</a>
           </p>
         </div>
-      </div>
-      <footer className="footer-container">
-  <button className="download-btn" onClick={handleDownload}>
-    Download Resume
-  </button>
+      </motion.div>
 
-</footer>
+      {/* Footer Section */}
+      <motion.footer
+        className="footer-container"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.2 }}
+      >
+        <button className="download-btn" onClick={handleDownload}>
+          Download Resume
+        </button>
+      </motion.footer>
     </div>
   );
 };

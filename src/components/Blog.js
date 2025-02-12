@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./Blog.css";
 
 const blogPosts = [
@@ -28,7 +29,6 @@ const blogPosts = [
     title: "Use Case vs User Story: Key Differences in UX Explained",
     description: "No more typing the same thing over and over again with Code Snippets!",
   },
-  
 ];
 
 function Blog() {
@@ -40,13 +40,29 @@ function Blog() {
 
   return (
     <div className="blog-container">
-      <h1 className="blog-title">Blog</h1>
-      <p className="blog-description">
+      <motion.h1
+        className="blog-title"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Blog
+      </motion.h1>
+      <motion.p
+        className="blog-description"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
         This is where I share my writings on programming, tutorials, and my experiences.
-      </p>
+      </motion.p>
 
-      <div className="search-bar">
-      
+      <motion.div
+        className="search-bar"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.4 }}
+      >
         <input
           type="text"
           className="blog-search"
@@ -54,11 +70,24 @@ function Blog() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-      </div>
+      </motion.div>
 
-      <div className="blog-list">
+      <motion.div
+        className="blog-list"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+      >
         {filteredPosts.map((post, index) => (
-          <div key={index} className="blog-item">
+          <motion.div
+            key={index}
+            className="blog-item"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: index * 0.2 }}
+          >
             <div className="blog-meta">
               <span>{post.date}</span> • <span>{post.readTime}</span>
             </div>
@@ -67,14 +96,19 @@ function Blog() {
             <a href={`/blog${index + 1}`} className="blog-link">
               Learn more →
             </a>
-          </div>
+          </motion.div>
         ))}
-      </div>
-      <footer className="blog-footer">
+      </motion.div>
+      <motion.footer
+        className="blog-footer"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
         <p>
           Designed and Developed by <span className="highlight-contact">Hari Baskar</span>.
         </p>
-      </footer>
+      </motion.footer>
     </div>
   );
 }

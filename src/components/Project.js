@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./ProjectPage.css";
 
 const projects = [
@@ -47,32 +48,59 @@ const Project = () => {
   return (
     <div className="projects-container">
       <div className="Project-main">
-      <h2 className="projects-title">Projects</h2>
-      <p className="projects-subtitle">I love bringing ideas to life through design and creativity. Explore my archive of projects, where I experiment, and refine my craft.
-      </p>
+        <motion.h2
+          className="projects-title"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Projects
+        </motion.h2>
+        <motion.p
+          className="projects-subtitle"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          I love bringing ideas to life through design and creativity. Explore my archive of projects, where I experiment, and refine my craft.
+        </motion.p>
 
-      {/* Search Bar with Icon */}
-      <div className="search-container">
-        <input
-          type="text"
-          className="project-search"
-          placeholder="Search projects"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-       
-      </div>
+        {/* Search Bar with Icon */}
+        <motion.div
+          className="search-container"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          <input
+            type="text"
+            className="project-search"
+            placeholder="Search projects"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </motion.div>
       </div>
 
       {/* Apply class if only one project is displayed */}
-      <div className={`projects-grid ${filteredProjects.length === 1 ? "single-result" : ""}`}>
+      <motion.div
+        className={`projects-grid ${filteredProjects.length === 1 ? "single-result" : ""}`}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+      >
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (
-            <div key={index} className="project-card">
+            <motion.div
+              key={index}
+              className="project-card"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <img src={project.image} alt={project.title} className="project-image" />
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
-                <a href={project.link} className="project-link-icon"  rel="noopener noreferrer">
+                <a href={project.link} className="project-link-icon" rel="noopener noreferrer">
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
@@ -89,17 +117,29 @@ const Project = () => {
                 ))}
               </div>
               <p className="project-description">{project.description}</p>
-            </div>
+            </motion.div>
           ))
         ) : (
-          <p className="no-results">No projects found.</p>
+          <motion.p
+            className="no-results"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+          >
+            No projects found.
+          </motion.p>
         )}
-      </div>
+      </motion.div>
 
       {/* Footer Section */}
-      <footer className="projects-footer">
+      <motion.footer
+        className="projects-footer"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
         Designed and Developed by <span className="highlight-project">Hari Baskar</span>.
-      </footer>
+      </motion.footer>
     </div>
   );
 };
