@@ -15,12 +15,9 @@ body {
 
 }
 
-@media screen and (max-width: 480px) {
-  body {
-    padding: 0 20px;
-  }
+
   
-}
+
 :root {
   --bgcolor: #080808;
   --text: grey;
@@ -73,6 +70,61 @@ body {
     opacity: 1;
   }
 }
+@media (max-width: 728px){
+  .div1 {
+    width: 100%;
+    padding: 0px;
+    text-align: left;
+    border-bottom: 0.8px solid gray;
+  }
+  .div1 .head{
+    font-size:1.5rem;
+    line-height: 120%;
+  }
+  .div1 .head-p{
+    font-size: 12px;
+  }
+  .imdiv {
+    display: flex;
+    flex-direction:column !important;
+    gap: 4px !important;
+    align-items: center !important;
+  }
+  .hero-image {
+    width: 250px;
+    height: auto;
+    margin-bottom: 8px !important;
+    border-radius: 7px;
+  }
+  .creative-page .div3{
+    display: none;
+  }
+  .div2 {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .div2 ul li{
+    font-size: 14px;
+    margin-bottom: 7px !important;
+  }
+  .div2 h2{
+    font-size:22px !important;
+    font-weight: bold !important;
+    padding-left: 4px !important;
+    margin-bottom: 8px !important;
+  }
+  .div2 .content-p{
+    font-size: 14px !important;
+    margin-top: 8px !important;
+  }
+  .div2 h3{
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+  }
+ 
+}
+
+
 
 .hero-image {
   animation: fadeIn 1s ease-in-out;
@@ -114,10 +166,13 @@ body {
   text-align: justify;
   color:rgb(215, 214, 214);
 }
+.div1 h1{
+  font-size:2.5rem;
+}
 
-.div1 .imgdiv {
+.imdiv {
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   gap: 20px;
 }
 
@@ -186,6 +241,47 @@ body {
   width: 70%;
   padding: 2rem;
 }
+
+@media (max-width: 768px) {
+  .responsive-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-item:nth-child(n+2) { /* Hide 2nd and 3rd items in the first list */
+    display: none;
+  }
+
+  .hero-image-1 {
+    margin-top: 5px;
+    width: 120px !important;
+    height: auto !important;
+    margin-bottom: 5px !important; /* Adds a 5px gap between the first list item and the image */
+  }
+
+ .full-list .hidden-mobile {
+    display: block; /* Show the two hidden items in the full list */
+  }
+  .desktop p{
+    display: none;
+  }
+  .desktop img{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+  }
+}
+.hidden-mobile{
+  display:none;
+}
+.desktop{
+  display: flex;
+}
+.mobile{
+  display: none;
+}
+
 
 .div3 {
   width: 30%;
@@ -266,16 +362,12 @@ body {
     flex-direction: column;
   }
 
-  .div2,
-  .div3 {
+  .div2 {
     width: 100%;
     border: none;
   }
 
-  .div3 {
-    position: static;
-    height: auto;
-  }
+
 }
 
 /* Overview Section */
