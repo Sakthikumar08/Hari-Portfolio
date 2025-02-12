@@ -43,7 +43,7 @@ const Blog3 = () => {
        
           <img src={imp} alt="shareride" className="hero-image" style={{margin:"0 auto",marginBottom:"20px"}}/>
           <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700 }}>
-          11 ways to improve your graphic design skills
+          4 ways to improve your graphic design skills
 </h1>
         
        
@@ -53,7 +53,7 @@ const Blog3 = () => {
         This means that sometimes graphic designers can feel like they’re being left behind in the industry or that their graphic design skills are getting rusty. If you want to keep your skills fresh, here's 11 ways to stay at the top of your game.
         </p>
         <div className="stats-links">
-  <span>1406 views -</span>
+
  
 </div>
 

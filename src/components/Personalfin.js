@@ -59,7 +59,7 @@ const Personalfin = () => {
         This app is designed to simplify managing your money by providing an all-in-one solution for budgeting, tracking expenses, and achieving financial goals. With an intuitive interface, it empowers users to monitor their income, categorize spending, and make informed financial decisions.
         </p>
         <div className="stats-links">
-  <span>1406 views -</span>
+
   <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
     <i className="fa-brands fa-figma"></i> Figma -
   </a>

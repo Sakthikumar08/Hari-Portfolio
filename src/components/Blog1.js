@@ -61,7 +61,7 @@ const Blog1 = () => {
         Design principles underpin everything we create as designers. We seek them out and our eyes crave them–whether we know it or not. They’re embedded in our layouts, sketches, concepts and final pieces. They’re often one of the first things we learn as a designer, so they become an important part of our process almost from day one.
         </p>
         <div className="stats-links">
-  <span>1406 views -</span>
+
  
 </div>
 

@@ -7,7 +7,7 @@ const projects = [
     image: require("../assets/bodhi.png"),
     description:
       "The Tutor App connects students and tutors seamlessly with an easy-to-use platform for scheduling and managing sessions. It supports academic subjects, skill-based learning, and test preparation with tailored solutions.",
-    tech: ["Figma", "Framer"],
+    tech: ["Figma"],
     link: "/creative",
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     image: require("../assets/irctc.PNG"),
     description:
       "The IRCTC platform is designed as India’s official portal for train ticket booking, catering, and tourism. It offers PNR checks, train schedules, and meal pre-booking for seamless travel..",
-    tech: ["Figma", "Framer"],
+    tech: ["Figma"],
     link: "/IRCTC",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     image: require("../assets/shareride.avif"),
     description:
       "The Share Ride App connects travelers heading in the same direction, making commuting cost-effective and eco-friendly. It ensures easy and secure ride-sharing for work, college, or long-distance trips.",
-    tech: ["Figma", "Framer"],
+    tech: ["Figma"],
     link: "/shareride",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     image: require("../assets/pfma.avif"),
     description:
       "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",
-    tech: ["Figma", "Framer"],
+    tech: ["Figma"],
     link: "/personal-fin-app",
   }
 ];
@@ -48,8 +48,7 @@ const Project = () => {
     <div className="projects-container">
       <div className="Project-main">
       <h2 className="projects-title">Projects</h2>
-      <p className="projects-subtitle">
-        I love building projects and practicing my engineering skills. Here's an archive of things that I've worked on.
+      <p className="projects-subtitle">I love bringing ideas to life through design and creativity. Explore my archive of projects, where I experiment, and refine my craft.
       </p>
 
       {/* Search Bar with Icon */}
@@ -73,7 +72,7 @@ const Project = () => {
               <img src={project.image} alt={project.title} className="project-image" />
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
-                <a href={project.link} className="project-link-icon" target="_blank" rel="noopener noreferrer">
+                <a href={project.link} className="project-link-icon"  rel="noopener noreferrer">
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
@@ -100,10 +99,6 @@ const Project = () => {
       {/* Footer Section */}
       <footer className="projects-footer">
         Designed and Developed by <span className="highlight-project">Hari Baskar</span>.
-        <br />
-        Built with <span className="highlight-project">Next.js</span> &{" "}
-        <span className="highlight-project">Chakra UI</span>. Hosted on{" "}
-        <span className="highlight-project">Vercel</span>.
       </footer>
     </div>
   );

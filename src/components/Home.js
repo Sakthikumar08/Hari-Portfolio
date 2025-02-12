@@ -25,7 +25,7 @@ description:
     {
       date: "Jul 18 2022",
       readTime: "2 min read",
-      title: "11 ways to improve your graphic design skills",
+      title: "4 ways to improve your graphic design skills",
       description: "Never leave your hands on your keyboard again.",
       link: "/blog3",
     },
@@ -44,7 +44,7 @@ link: "/blog4",
           image: require("../assets/bodhi.png"), 
           description:
             "The Tutor App connects students and tutors seamlessly with an easy-to-use platform for scheduling and managing sessions. It supports academic subjects, skill-based learning, and test preparation with tailored solutions.",
-          tech: ["Figma", "Framer"],
+          tech: ["Figma"],
           link: "/creative"
         },
         {
@@ -52,14 +52,14 @@ link: "/blog4",
             image: require("../assets/irctc.PNG"), 
             description:
               "The IRCTC platform is designed as India’s official portal for train ticket booking, catering, and tourism. It offers PNR checks, train schedules, and meal pre-booking for seamless travel.",
-            tech: ["Figma", "Framer"],
+            tech: ["Figma"],
             link: "/IRCTC"
           },{
             title: "Share Ride App: Smarter, Greener, and Convenient Rides",
                image: require("../assets/shareride.PNG"), 
                description:
                  "The Share Ride App connects travelers heading in the same direction, making commuting cost-effective and eco-friendly. It ensures easy and secure ride-sharing for work, college, or long-distance trips.",
-               tech: ["Figma", "Framer"],
+               tech: ["Figma"],
                link: "/shareride"
              },
              {
@@ -67,7 +67,7 @@ link: "/blog4",
                  image: require("../assets/pfma.avif"), 
                  description:
                    "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",
-                 tech: ["Figma", "Framer"],
+                 tech: ["Figma"],
                  link: "/Personal-fin-app"
                },
           
@@ -117,11 +117,7 @@ link: "/blog4",
                     initial="hidden"
                     animate="visible"
                     variants={containerVariants}
-                >  <img
-                className="hero-background"
-                src="https://svgsilh.com/svg/26432.svg"
-                alt="Background"
-            />
+                >  
                     <motion.h1 className="hero-title" variants={itemVariants}>
                         Hey there! I'm -<br />
                         <span className="highlight">Hari Baskar.</span>
@@ -134,19 +130,21 @@ link: "/blog4",
                         🚀 Designing intuitive digital experiences with a blend of <br />⚡ creativity and precision, delivering projects that are both <br/> <span>beautiful and functional.</span>
                     </motion.p>
                     <motion.div className="social-links" variants={itemVariants}>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-box">
-                            <i className="fa-brands fa-github"></i>
-                            <p>Github</p>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-box">
-                            <i className="fa-brands fa-linkedin"></i>
-                            <p>LinkedIn</p>
-                        </a>
-                        <a href="mailto:contact@example.com" className="social-box">
-                            <i className="fa-solid fa-envelope"></i>
-                            <p>Email</p>
-                        </a>
-                    </motion.div>
+    <a href="https://www.behance.net/haribaskar2UI_UX" target="_blank" rel="noopener noreferrer" className="social-box">
+        <i className="fa-brands fa-behance"></i>
+        <p>Behance</p>
+    </a>
+    <a href="mailto:haribaskarhb1994@gmail.com" className="social-box">
+        <i className="fa-solid fa-envelope"></i>
+        <p>Email</p>
+    </a>
+    <a href="https://drive.google.com/file/d/1-k1eAakCr_6EJTQHYoLJEfgyXiur8GcN/view" className="social-box">
+        <i className="fa-solid fa-file"></i>
+        <p>Resume</p>
+    </a>
+
+</motion.div>
+
                 </motion.div>
 
                 {/* About Section */}
@@ -320,22 +318,21 @@ Expertise extends to Frontend-Development enabling me to create both aesthetical
                         Feel free to get in touch and talk more about your projects.
                     </p>
                     <div className="contact-buttons">
-                        <a href="https://linkedin.in" className="contact-btn">
-                            <i className="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="mailto:example@email.com" className="contact-btn">
-                            <i className="fas fa-envelope"></i> Email
-                        </a>
-                        <a href="https://linkedin.in" className="contact-btn">
-                            <i className="fas fa-file"></i> Resume
-                        </a>
-                    </div>
+    <a href="https://www.behance.net/haribaskar2UI_UX" className="contact-btn">
+        <i className="fab fa-behance"></i> Behance
+    </a>
+    <a href="mailto:haribaskarhb1994@gmail.com" className="contact-btn">
+        <i className="fas fa-envelope"></i> Email
+    </a>
+    <a href="https://drive.google.com/file/d/1-k1eAakCr_6EJTQHYoLJEfgyXiur8GcN/view" className="contact-btn">
+        <i className="fas fa-file"></i> Resume
+    </a>
+    <a href="tel:+91 7358799936" className="contact-btn">
+        <i className="fas fa-phone"></i> Phone
+    </a>
+</div>
                     <footer className="contact-footer">
                         Designed and Developed by <span className="highlight-contact">Hari Baskar</span>.
-                        <br />
-                        Built with <span className="highlight-contact">Next.js</span> &{" "}
-                        <span className="highlight-contact">Chakra UI</span>. Hosted on{" "}
-                        <span className="highlight-contact">Vercel</span>.
                     </footer>
                 </motion.div>
             </div>

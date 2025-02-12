@@ -117,11 +117,11 @@ const CreativePage = () => {
           Bodhi is a tutor-finding app designed to bridge the educational gap for rural students while providing tutors with flexible teaching opportunities and income generation.
         </p>
         <div className="stats-links">
-  <span>1406 views -</span>
-  <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
+
+  <a href="https://www.figma.com/design/TlCbjFAqDSblpXuURpUw4k/Tutor-app?node-id=0-1&p=f&t=mWDeiuF9aXcnGf1a-0" target="_blank" rel="noopener noreferrer">
     <i className="fa-brands fa-figma"></i> Figma -
   </a>
-  <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.behance.net/gallery/183574855/Bodhi-(Tutor-Application-)-UIUX-Case-Study" target="_blank" rel="noopener noreferrer">
     <i className="fa-brands fa-behance"></i> Behance
   </a>
 </div>

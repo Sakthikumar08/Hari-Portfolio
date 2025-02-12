@@ -19,7 +19,7 @@ const blogPosts = [
   {
     date: "Jul 18 2022",
     readTime: "2 min read",
-    title: "11 ways to improve your graphic design skills",
+    title: "4 ways to improve your graphic design skills",
     description: "Never leave your hands on your keyboard again.",
   },
   {
@@ -72,12 +72,7 @@ function Blog() {
       </div>
       <footer className="blog-footer">
         <p>
-          Designed and Developed by <span className="highlight">Hari Prasad</span>.
-        </p>
-        <p>
-          Built with <span className="highlight">Next.js</span> &{" "}
-          <span className="highlight">Chakra UI</span>. Hosted on{" "}
-          <span className="highlight">Vercel</span>.
+          Designed and Developed by <span className="highlight-contact">Hari Baskar</span>.
         </p>
       </footer>
     </div>

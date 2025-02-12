@@ -113,11 +113,11 @@ const Irctc = () => {
         The IRCTC (Indian Railway Catering and Tourism Corporation) platform is India’s official gateway for booking train tickets, catering services, and tourism packages.Designed to handle millions of users daily, it provides features like ticket booking, PNR status checks, train schedules, and meal pre-booking, making railway travel more convenient and accessible.
         </p>
         <div className="stats-links">
-  <span>1406 views -</span>
-  <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
+
+  <a href="https://www.figma.com/design/tS5JS0RMG5PMeg81lnN31P/IRCTC--Heuristic-Evaluation-(Copy)?m=auto&t=WIqlQqq8ZlO3Vbt7-6" target="_blank" rel="noopener noreferrer">
     <i className="fa-brands fa-figma"></i> Figma -
   </a>
-  <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.behance.net/gallery/191340447/IRCTC-Heuristic-Evaluation-and-Re-Design" target="_blank" rel="noopener noreferrer">
     <i className="fa-brands fa-behance"></i> Behance
   </a>
 </div>

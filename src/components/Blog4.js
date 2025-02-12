@@ -54,7 +54,7 @@ const Blog4 = () => {
 While they might sound similar, use cases and user stories have unique roles in creating a great user experience. Both help designers and developers focus on the user, but they do it in slightly different way.
         </p>
         <div className="stats-links">
-  <span>1406 views -</span>
+
  
 </div>
 

@@ -52,7 +52,7 @@ const Blog2 = () => {
         We’ve all been feeling the squeeze over the past few years, but at Shillington we don’t want this to stop anyone getting the best graphic design tools and resources that the world has to offer.
         </p>
         <div className="stats-links">
-  <span>1406 views -</span>
+
  
 </div>
 

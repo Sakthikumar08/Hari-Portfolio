@@ -58,8 +58,8 @@ const Shareride = () => {
         The Share Ride App is a user-friendly platform designed to connect people traveling in the same direction, making commuting more affordable and eco-friendly. Whether you're heading to work, college, or a long-distance destination, this app helps you share rides easily and securely.
         </p>
         <div className="stats-links">
-  <span>1406 views -</span>
-  <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
+
+  <a href="https://www.figma.com/design/9AuUB96GWxFOTRbNBenfmy/share_ride_app?m=auto&t=WIqlQqq8ZlO3Vbt7-6" target="_blank" rel="noopener noreferrer">
     <i className="fa-brands fa-figma"></i> Figma -
   </a>
   <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
