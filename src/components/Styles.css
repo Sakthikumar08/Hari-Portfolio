@@ -332,86 +332,97 @@ body {
     margin-bottom: 15px;
 }
 @media (max-width: 768px) {
-    .portfolio-container{
-        padding: 0;
+    /* Remove extra padding for proper centering */
+    .portfolio-container {
+        padding: 0 10px; /* Reduce side padding to center content */
+        text-align: center;
     }
-    .portfolio-title{
+
+    /* Title and Subtitle Adjustments */
+    .portfolio-title {
         font-size: 1.2rem;
         margin-bottom: 4px;
+        text-align: center;
     }
+
     .portfolio-subtitle {
         font-size: 12px;
+        text-align: center;
     }
-    .portfolio-grid{
-        display: flex;
-        flex-direction: column; /* Allow wrapping of cards */
-        gap:0;
-        
-        
-    }
-    .portfolio-card:nth-child(even) {
-        margin-left: 0;
-        margin-top:20px;
-        /* Align odd cards to the left */
-    }
-    
-    .portfolio-card:nth-child(odd) {
-        margin-left: 0; 
-        margin-top:20px;
-        /* Indent even cards to create zigzag */
-    }
-    /* Individual project card */
-.portfolio-card {
-    border-radius: 5px;
-    padding: 0px;
-    width: 100%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-   
-}
-.portfolio-image {
-    width: 120%; /* Increase from 100% to 120% */
-    height: 150px;
-    object-fit: cover;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    margin-bottom: 5px;
-}
-.portfolio-card-title1 {
-    font-size: 01rem;
-    font-weight: bold;
-    margin-bottom: 0px;
-    margin-right: 5px;
-}
-.portfolio-description {
-    font-size: 0.7rem;
-    color: #aaa;
-    margin-bottom: 3px;
-    margin-left: 5px;
-    margin-right: 5px;
-    line-height: 130%;
-}
-.portfolio-tech-stack {
-    
-    gap: 5px;
-  
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-bottom: 1px solid grey;
-}
 
-.portfolio-tech {
-    
-    gap: 5px;
-    padding: 3px 12px;
-    font-size: 0.6rem;
-    border-radius: 6px;
-    font-weight: bold;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-}
-    
+    /* Ensure the portfolio grid is centered */
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        gap: 20px; /* Adjust space between cards */
+    }
+
+    /* Portfolio Card Adjustments */
+    .portfolio-card {
+        border-radius: 5px;
+        padding: 0px;
+        width: 95%; /* Ensure width does not exceed container */
+        max-width: 400px; /* Limit max width for better layout */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        margin: 0 auto; /* Center the card */
+    }
+
+    /* Remove left margin to center the zigzag layout */
+    .portfolio-card:nth-child(even),
+    .portfolio-card:nth-child(odd) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    /* Make images fit perfectly within the div */
+    .portfolio-image {
+        width: 100%; /* Ensure full width */
+        height: auto; /* Adjust height dynamically */
+        max-height: 200px; /* Prevent excessive stretching */
+        object-fit: contain; /* Show full image without cropping */
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    /* Adjustments for better alignment */
+    .portfolio-card-title1 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0px;
+        margin-right: 5px;
+        text-align: center;
+    }
+
+    .portfolio-description {
+        font-size: 0.8rem;
+        color: #aaa;
+        margin: 5px;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    /* Tech Stack Adjustments */
+    .portfolio-tech-stack {
+        gap: 5px;
+        margin: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid grey;
+        justify-content: center;
+    }
+
+    .portfolio-tech {
+        gap: 5px;
+        padding: 3px 12px;
+        font-size: 0.7rem;
+        border-radius: 6px;
+        font-weight: bold;
+        border: 1px solid transparent;
+        transition: all 0.3s ease;
+    }
 }
 
 /* Portfolio Header - Title & Icon */
