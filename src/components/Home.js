@@ -265,7 +265,7 @@ Expertise extends to Frontend-Development enabling me to create both aesthetical
             onClick={() => (window.location.href = project.link)}
           >
             <img src={project.image} alt={project.title} className="portfolio-image" />
-            <h3 className="portfolio-card-title">{project.title}</h3>
+            <h3 className="portfolio-card-title1">{project.title}</h3>
 
             <div className="portfolio-tech-stack">
               {project.tech.map((tech, idx) => (
@@ -298,7 +298,7 @@ Expertise extends to Frontend-Development enabling me to create both aesthetical
                         {articles.map((article, index) => (
                           <a key={index} href={article.link} className="article-link" target="_blank" rel="noopener noreferrer">
                             <div  className="article-card">
-                                <h3 className="article-title">{article.title}</h3>
+                                <h3 className="article-title1">{article.title}</h3>
                                 <p className="article-meta">{article.date} • {article.readTime}</p>
                             </div>
                             </a>

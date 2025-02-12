@@ -10,27 +10,26 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Close menu when clicking a link
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
   return (
-    <nav className="navbar">
+    <nav className="navbar1">
       {/* Logo */}
-      <div className="logo">｛ HARI ｝</div>
+      <div className="logo1">｛ HARI ｝</div>
 
-      {/* Hamburger Menu Button */}
-      <button className={`hamburger ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
-        ☰
+      {/* Hamburger / Close Button */}
+      <button className="hamburger1" onClick={toggleMenu}>
+        {menuOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
       </button>
 
-      {/* Navigation Links */}
-      <ul className={`nav-items ${menuOpen ? "active" : ""}`}>
-        <li><Link to="/" className="nav-item" onClick={closeMenu}>Home</Link></li>
-        <li><Link to="/project" className="nav-item" onClick={closeMenu}>Project</Link></li>
-        <li><Link to="/blog" className="nav-item" onClick={closeMenu}>Blog</Link></li>
-        <li><Link to="/about" className="nav-item" onClick={closeMenu}>About</Link></li>
+      {/* Navigation Menu */}
+      <ul className={`nav-items1 ${menuOpen ? "activenav1" : ""}`}>
+        {/* Close Button inside Navbar */}
+        <li className="close-btn1">
+          <button onClick={toggleMenu}><i className="fa-solid fa-xmark"></i></button>
+        </li>
+        <li><Link to="/" className="nav-item1" onClick={toggleMenu}>Home</Link></li>
+        <li><Link to="/project" className="nav-item1" onClick={toggleMenu}>Project</Link></li>
+        <li><Link to="/blog" className="nav-item1" onClick={toggleMenu}>Blog</Link></li>
+        <li><Link to="/about" className="nav-item1" onClick={toggleMenu}>About</Link></li>
       </ul>
     </nav>
   );
