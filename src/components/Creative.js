@@ -159,51 +159,48 @@ win-win scenario.
 
           <div ref={(el) => (sectionRefs.current["Project Overview"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Project Overview</h2>
-            <div className="desktop" style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
-            <p style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify" }} className="content-p">
-            Finding tutor is a very common problem in our country. Students are
-struggling to get tutor who can accommodate the student’s schedule
-and finding a tutor with expertise in a specific subject or topic, 
+           
+<div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between", gap: "20px", flexWrap: "wrap" }}>
+  {/* First List (Only 3 Items) */}
+  <ul className="responsive-list" style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify", padding: 0, margin: 0, listStyleType: "none" }}>
+    <li className="list-item">Finding tutor is a very common problem in our country. Students are
+    struggling to get tutor who can accommodate the student’s schedule</li>
+    <li className="list-item">finding a tutor with expertise in a specific subject or topic, 
 especially rural areas, can be challenging. Also handling payments
 securely and reliably can be a concern for both students and tutors.
 Along with this we have found out many problems related to tuition
-and tried to solve them through an app called “Bodhi” . With this app, 
+and tried to solve them through an app called “Bodhi” .</li>
+    <li className="list-item">With this app, 
 anyone can find good tutors and get quality education in their nearby
 location and find solutions to many tuition related problems. we have
 tried to present the complete case study of the User Experience and 
-User Interface design of the app here. 
-            </p>
-            <img 
-  src={bodhi3} 
-  alt="bodhi" 
-  className="hero-image-1" 
-  style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
-/>
-</div>
-<div className="mobile" style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
-            <p style={{ flex: 1, fontSize: "14px", lineHeight: "140%", textAlign: "justify" }} className="content-p">
-            Finding tutor is a very common problem in our country. Students are
-struggling to get tutor who can accommodate the student’s schedule
+User Interface design of the app here. </li>
+  </ul>
 
-            </p>
-            <img 
-  src={bodhi3} 
-  alt="bodhi" 
-  className="hero-image-1" 
-  style={{  objectFit: "cover", borderRadius: "10px" }}
-/>
-
+  {/* Image */}
+  <img 
+    src={bodhi3} 
+    alt="bodhi5" 
+    className="hero-image-1" 
+    style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
+  />
 </div>
-<p className="content-p" style={{}}>finding a tutor with expertise in a specific subject or topic, 
+
+{/* Remaining List (Other Items) */}
+<ul className="full-list" style={{ padding: 0, margin: "10px 0 0 0", listStyleType: "none" }}>
+  <li className="hidden-mobile">finding a tutor with expertise in a specific subject or topic, 
 especially rural areas, can be challenging. Also handling payments
 securely and reliably can be a concern for both students and tutors.
 Along with this we have found out many problems related to tuition
-and tried to solve them through an app called “Bodhi” . With this app, 
+and tried to solve them through an app called “Bodhi” .</li>
+<li className="hidden-mobile"> With this app, 
 anyone can find good tutors and get quality education in their nearby
 location and find solutions to many tuition related problems. we have
 tried to present the complete case study of the User Experience and 
-User Interface design of the app here. </p>
-
+User Interface design of the app here.</li>
+  
+ 
+</ul>
           </div>
 
           <div ref={(el) => (sectionRefs.current["Problem Statement"] = el)} className="section">

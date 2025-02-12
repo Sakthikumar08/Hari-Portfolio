@@ -66,28 +66,28 @@ const About = () => {
       description:
         "The Tutor App is a comprehensive platform designed to connect students and tutors seamlessly. It offers a user-friendly interface for scheduling, attending, and managing tutoring sessions. Whether it's academic subjects, skill-based learning, or test preparation.",
       image: "https://framerusercontent.com/images/TCPeAZObpHshqcExOUJlnxgSM.png",
-      link: "https://deignfromharibaskar.framer.website/work/modernization-of-a-subscription-management-platform",
+      link: "/creative",
     },
     {
       title: "Share Ride App: Smarter, Greener, and Convenient Rides",
       description:
         "The Share Ride App is a user-friendly platform designed to connect people traveling in the same direction, making commuting more affordable and eco-friendly. Whether you're heading to work, college, or a long-distance journey, this app makes ride-sharing seamless.",
       image: "https://framerusercontent.com/images/ppXLZMuMRfFcDkaV7R6EEwYFtw.png",
-      link: "https://deignfromharibaskar.framer.website/work/revamping-an-e-commerce-website",
+      link: "/shareride",
     },
     {
       title: "IRCTC Platform: Simplifying Railway Travel in India",
       description:
         "The IRCTC (Indian Railway Catering and Tourism Corporation) platform is India's official gateway for booking train tickets, catering services, and tourism packages. Designed to handle millions of users daily, it provides a seamless railway booking experience.",
       image: "https://framerusercontent.com/images/RiTU9qf3PRWgOcVHeGxgRtWvgLY.png",
-      link: "https://deignfromharibaskar.framer.website/work/developing-a-mobile-health-tracking-app",
+      link: "/IRCTC",
     },
     {
       title: "Personal Finance Management Application",
       description:
         "This app simplifies money management by offering budgeting, expense tracking, and financial goal-setting in one place. Its intuitive interface helps users monitor income, categorize spending, and make informed financial decisions.",
       image: pfma,
-      link: "https://deignfromharibaskar.framer.website/work/developing-a-mobile-health-tracking-app",
+      link: "/Personal-fin-app",
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);

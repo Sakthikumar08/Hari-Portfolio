@@ -105,11 +105,11 @@ const Irctc = () => {
           <img src={bodhi1} alt="bodhi" className="hero-image" />
           <img src={bodhi2} alt="bodhi" className="hero-image" />
         </div>
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700 }}>
+        <h1 className="head"  style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700 }}>
         IRCTC Platform: Simplifying Railway Travel in India
 </h1>
 
-        <p>
+        <p className="head-p">
         The IRCTC (Indian Railway Catering and Tourism Corporation) platform is India’s official gateway for booking train tickets, catering services, and tourism packages.Designed to handle millions of users daily, it provides features like ticket booking, PNR status checks, train schedules, and meal pre-booking, making railway travel more convenient and accessible.
         </p>
         <div className="stats-links">
@@ -128,7 +128,7 @@ const Irctc = () => {
             className="hero-image" 
             style={{ display: "block", margin: "0 auto" }} 
           />
-          <p style={{ marginTop: '18px' }}>
+          <p className="head-p" style={{ marginTop: '18px' }}>
           Review of the app to highlight the mismatches and present probable solutions, along with new features.
           </p>
       
@@ -138,43 +138,81 @@ const Irctc = () => {
         <div className="div2">
           <div ref={(el) => (sectionRefs.current["What motivated me to began?"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">What motivated me to began?</h2>
-            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
-            <p style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify" }} className="content-p">
-            The motivation for initiating a heuristic evaluation and redesign of the IRCTC websites
-stems from recognition of usability challenges and inefficiencies. Identifying
+            
+
+<div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between", gap: "20px", flexWrap: "wrap" }}>
+  {/* First List (Only 3 Items) */}
+  <ul className="responsive-list" style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify", padding: 0, margin: 0, listStyleType: "none" }}>
+    <li className="list-item">The motivation for initiating a heuristic evaluation and redesign of the IRCTC websites
+    stems from recognition of usability challenges and inefficiencies.</li>
+    <li className="list-item">Identifying
 issues such as complex navigation, slow performance, and potential user
 experience obstacles understood the need for improvement. The goal is to
 enhance the overall user interface, streamline the ticket booking process, and
 address existing usability concerns. This proactive approach aims to create a
 more user-friendly, efficient, and accessible platform for users engaging
-with the IRCTC websites.     
-            </p>
-            <img 
-  src={irctc4} 
-  alt="bodhi" 
-  className="hero-image" 
-  style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
-/></div>
+with the IRCTC websites.  </li>
+
+  </ul>
+
+  {/* Image */}
+  <img 
+    src={irctc4} 
+    alt="bodhi5" 
+    className="hero-image-1" 
+    style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
+  />
+</div>
+
+{/* Remaining List (Other Items) */}
+<ul className="full-list" style={{ padding: 0, margin: "10px 0 0 0", listStyleType: "none" }}>
+  <li className="hidden-mobile">Identifying
+issues such as complex navigation, slow performance, and potential user
+experience obstacles understood the need for improvement. The goal is to
+enhance the overall user interface, streamline the ticket booking process, and
+address existing usability concerns. This proactive approach aims to create a
+more user-friendly, efficient, and accessible platform for users engaging
+with the IRCTC websites. </li>
+
+</ul>
           </div>
 
           <div ref={(el) => (sectionRefs.current["Problem Statement"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Problem Statement</h2>
-            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "20px" }}>
-            <p style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify" }} className="content-p">
-            The IRCTC Website currently faces several usability issues that hinder user
-experience and satisfaction. Users encounter confusion due to inconsistent
+          
+<div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between", gap: "20px", flexWrap: "wrap" }}>
+  {/* First List (Only 3 Items) */}
+  <ul className="responsive-list" style={{ flex: 1, fontSize: "16px", lineHeight: "1.6", textAlign: "justify", padding: 0, margin: 0, listStyleType: "none" }}>
+    <li className="list-item"> The IRCTC Website currently faces several usability issues that hinder user
+    experience and satisfaction.</li>
+    <li className="list-item">Users encounter confusion due to inconsistent
 design elements, such as the placements of features and the absence of 
 proper categorization. Additionally, the unavailability of an SOS feature 
 could be a notable gap in ensuring the well-being and prompt support for 
 users. Consideration should be given to incorporating such features to
-enhance the overall safety measures of the IRCTC website.     
-            </p>
-            <img 
-  src={irctc5} 
-  alt="bodhi" 
-  className="hero-image" 
-  style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
-/></div>
+enhance the overall safety measures of the IRCTC website.  </li>
+
+  </ul>
+
+  {/* Image */}
+  <img 
+    src={irctc5} 
+    alt="bodhi5" 
+    className="hero-image-1" 
+    style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px" }}
+  />
+</div>
+
+{/* Remaining List (Other Items) */}
+<ul className="full-list" style={{ padding: 0, margin: "10px 0 0 0", listStyleType: "none" }}>
+  <li className="hidden-mobile">Users encounter confusion due to inconsistent
+design elements, such as the placements of features and the absence of 
+proper categorization. Additionally, the unavailability of an SOS feature 
+could be a notable gap in ensuring the well-being and prompt support for 
+users. Consideration should be given to incorporating such features to
+enhance the overall safety measures of the IRCTC website. </li>
+
+</ul>
             
 
           </div>

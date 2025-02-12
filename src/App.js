@@ -22,13 +22,14 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/project" element={<Project />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/creative" element={<Creative />} />
             <Route path="/IRCTC" element={<Irctc />} />
             <Route path="/shareride" element={<Shareride />} />
             <Route path="/Personal-fin-app" element={<Personalfin />} />
-            <Route path="/about" element={<About />} />
+           
             <Route path="/blog1" element={<Blog1 />} />
             <Route path="/blog2" element={<Blog2 />} />
             <Route path="/blog3" element={<Blog3 />} />

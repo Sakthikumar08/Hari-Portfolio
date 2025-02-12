@@ -49,6 +49,9 @@
     color: var(--white);
     cursor: pointer;
 }
+.close-btn1{
+    display: none;
+}
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
@@ -70,6 +73,9 @@
         border-bottom: 0.5px solid #272727;
         z-index: 1000;
         position: relative;
+    }
+    .close-btn1{
+        display: block;
     }
 
     /* Hide Nav Items Initially */

@@ -78,7 +78,7 @@ body {
     border-bottom: 0.8px solid gray;
   }
   .div1 .head{
-    font-size:1.5rem;
+    font-size:1.5rem !important;
     line-height: 120%;
   }
   .div1 .head-p{
@@ -172,7 +172,7 @@ body {
 
 .imdiv {
   display: flex;
-  flex-direction:row;
+  flex-direction:row !important;
   gap: 20px;
 }
 
@@ -263,23 +263,28 @@ body {
     display: block; /* Show the two hidden items in the full list */
   }
   .desktop p{
-    display: none;
+    display: none ;
   }
   .desktop img{
-    display: none;
+    display: none ;
   }
   .mobile{
     display: flex;
   }
+ 
+  div .hidden-mobile{
+    display: block;
+  }
+ 
 }
 .hidden-mobile{
-  display:none;
+  display:none ;
 }
 .desktop{
-  display: flex;
+  display: flex ;
 }
 .mobile{
-  display: none;
+  display: none !important;
 }
 
 

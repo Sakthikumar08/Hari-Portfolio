@@ -27,9 +27,10 @@ const Navbar = () => {
           <button onClick={toggleMenu}><i className="fa-solid fa-xmark"></i></button>
         </li>
         <li><Link to="/" className="nav-item1" onClick={toggleMenu}>Home</Link></li>
+        <li><Link to="/about" className="nav-item1" onClick={toggleMenu}>About</Link></li>
         <li><Link to="/project" className="nav-item1" onClick={toggleMenu}>Project</Link></li>
         <li><Link to="/blog" className="nav-item1" onClick={toggleMenu}>Blog</Link></li>
-        <li><Link to="/about" className="nav-item1" onClick={toggleMenu}>About</Link></li>
+        
       </ul>
     </nav>
   );
