@@ -75,18 +75,33 @@ const Personalfin = () => {
       <div className="content-wrapper">
         <div className="div2">
           <div ref={(el) => (sectionRefs.current["Problem Statement"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Problem Statement</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Project Overview</h2>
             <p className="content-p">
-            The existing intranet was outdated and difficult to navigate, leading to low engagement and underutilization. Employees struggled to find relevant information, and the lack of interactive features hindered collaboration. The challenge was to create a more intuitive interface, improve content organization, and incorporate interactive elements to foster better communication and engagement.
-            </p>
+            Managing personal finances effectively is crucial for financial stability and growth. Many users struggle with tracking their income, expenses, and transactions, leading to overspending and poor financial decisions.
+SmartBudget is a personal finance management application designed to help users track their financial transactions, monitor income and expenses, and generate reports for daily, weekly, monthly, and yearly analysis. With real-time insights and automated financial summaries, the app empowers users to budget smarter and save better.
+
+          </p>
            
           </div>
 
           <div ref={(el) => (sectionRefs.current["Results"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Results</h2>
+            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Problem Statement            </h2>
             <p className="content-p">
-            Following the redesign, employee engagement with the intranet increased by 45%, and the time spent on the platform rose by 30%. The new interface and improved content organization made it easier for employees to find information and collaborate. Feedback from employees was highly positive, with satisfaction ratings increasing from 3.5 to 4.6 stars.
+            Many individuals face difficulties in:
             </p>
+
+            <ul className="content-p">
+            <li>•Tracking daily expenses and maintaining financial discipline.</li>
+            <li>•Understanding income vs. outcome trends over different time periods.</li>
+            <li>•Managing multiple payment methods (bank accounts, credit cards, cash, UPI, etc.).</li>
+            <li>•Lack of clear financial reports for better decision-making.</li>
+            <li>•Forgetting bill payments and missing due dates.</li>
+          </ul>
+          <p className="content-p">
+            A comprehensive personal finance app that provides clear transaction tracking, 
+            automated financial summaries, and detailed reports is essential to help users 
+            gain control over their finances.
+          </p>
             <img 
   src={pfma} 
   alt="pfma" 
@@ -96,29 +111,67 @@ const Personalfin = () => {
 
           </div>
           <div ref={(el) => (sectionRefs.current["Process"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Process</h2>
-            
-            <ul>
-                <li>Research & Analysis: We conducted user interviews, surveys, and analyzed in-app analytics to understand the pain points and user needs. We also studied competitor apps and industry trends to gather insights</li>
-                <li>Information Architecture: Based on the research findings, we restructured the app's navigation and content, prioritizing features and information according to user needs.</li>
-                <li>Wireframing & Prototyping: We designed low-fidelity wireframes to visualize the new layout and navigation, iteratively refining them based on user feedback. Afterward, we built a high-fidelity, interactive prototype to test the design. </li>
-                <li>Usability Testing: We conducted usability tests with a diverse group of users to validate the design and identify areas for improvement. Based on the feedback, we made necessary adjustments to the design.</li>
-                <li>Visual Design & Style Guide: We developed a cohesive visual language, including color schemes, typography, and iconography, ensuring consistency throughout the app. We also created a style guide to maintain design consistency in future updates.</li>
-                
-            </ul>
-            <img 
-  src={pfma6} 
-  alt="pfma" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-          </div>
+  <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Proposed Solution</h2>
+
+  <ul>
+    <li><strong>Transaction Tracking & Categorization:</strong>
+      <ul className="list-disc pl-5">
+        <li>Auto-sync bank transactions (cards, UPI, cash, digital wallets).</li>
+        <li>Manually add transactions with quick input.</li>
+        <li>AI-powered categorization (food, rent, travel, bills, shopping, etc.).</li>
+      </ul>
+    </li>
+
+    <li><strong>Income & Expense Management:</strong>
+      <ul className="list-disc pl-5">
+        <li>Add multiple income sources (salary, freelance, investments, passive income).</li>
+        <li>Track total expenses and compare with monthly budgets.</li>
+        <li>Identify unnecessary spending with AI-driven insights.</li>
+      </ul>
+    </li>
+
+    <li><strong>Financial Summary & Reports:</strong>
+      <ul className="list-disc pl-5">
+        <li>Daily, Weekly, Monthly, Yearly breakdowns of income & expenses.</li>
+        <li>Visual reports (charts & graphs) for easy financial analysis.</li>
+        <li>Spending trends & budget optimization suggestions.</li>
+      </ul>
+    </li>
+
+    <li><strong>Budgeting & Savings Goals:</strong>
+      <ul className="list-disc pl-5">
+        <li>Set custom budgets for different categories.</li>
+        <li>Track savings goals and progress automatically.</li>
+        <li>Smart alerts when approaching budget limits.</li>
+      </ul>
+    </li>
+
+    <li><strong>Impact & Benefits:</strong>
+      <ul className="list-disc pl-5">
+        <li>Simplifies financial tracking with automated insights.</li>
+        <li>Saves time by eliminating manual calculations.</li>
+        <li>Reduces overspending with budget alerts.</li>
+        <li>Helps users achieve financial goals with smart savings strategies.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <img 
+    src={pfma6} 
+    alt="pfma" 
+    className="hero-image" 
+    style={{ display: "block", margin: "0 auto" }} 
+  />
+</div>
+
 
           <div ref={(el) => (sectionRefs.current["Conclusion"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Conclusion</h2>
          
             <p className="content-p">
-            Optimizing the corporate intranet significantly improved usability and employee engagement. By creating a more intuitive and interactive platform, we enhanced internal communication and collaboration, leading to a more connected and productive workforce. This project highlights the importance of user-centered design in improving organizational tools and employee satisfaction.
+             
+SmartBudget empowers users to take control of their finances by automating transaction tracking, income & expense management, and financial reporting. By integrating real-time insights, AI-driven analytics, and intuitive UI, the app makes personal finance effortless and stress-free.
+With detailed reports, budget tracking, and proactive alerts, SmartBudget helps users spend wisely, save effectively, and achieve long-term financial stability.
             </p>    
             
           </div>
@@ -139,9 +192,9 @@ const Personalfin = () => {
 
           <h3>
           <ul>
-          <li className={activeSection === "Problem Statement" ? "active" : ""} onClick={() => scrollToSection("Problem Statement")}>Problem Statement</li>
-            <li className={activeSection === "Results" ? "active" : ""} onClick={() => scrollToSection("Results")}>Results</li>
-            <li className={activeSection === "Process" ? "active" : ""} onClick={() => scrollToSection("Process")}>Process</li>
+          <li className={activeSection === "Problem Statement" ? "active" : ""} onClick={() => scrollToSection("Problem Statement")}>Project Overview          </li>
+            <li className={activeSection === "Results" ? "active" : ""} onClick={() => scrollToSection("Results")}>Problem Statement            </li>
+            <li className={activeSection === "Process" ? "active" : ""} onClick={() => scrollToSection("Process")}>Proposed Solution            </li>
             <li className={activeSection === "Conclusion" ? "active" : ""} onClick={() => scrollToSection("Conclusion")}>Conclusion</li>
             
           </ul>

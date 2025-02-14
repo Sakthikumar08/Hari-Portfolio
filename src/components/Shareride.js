@@ -58,14 +58,14 @@ const Shareride = () => {
         The Share Ride App is a user-friendly platform designed to connect people traveling in the same direction, making commuting more affordable and eco-friendly. Whether you're heading to work, college, or a long-distance destination, this app helps you share rides easily and securely.
         </p>
         <div className="stats-links">
-
   <a href="https://www.figma.com/design/9AuUB96GWxFOTRbNBenfmy/share_ride_app?m=auto&t=WIqlQqq8ZlO3Vbt7-6" target="_blank" rel="noopener noreferrer">
     <i className="fa-brands fa-figma"></i> Figma -
   </a>
-  <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
-    <i className="fa-brands fa-behance"></i> Behance
+  <a href="https://www.figma.com/proto/bl5nGRLrOmiJlubUvLrRHp/prototype-share-ride?node-id=1-20189&starting-point-node-id=1%3A20419&t=iRRv0UqVf318wzMf-1" target="_blank" rel="noopener noreferrer">
+    <i className="fa-solid fa-cube"></i> Prototype
   </a>
 </div>
+
 
         
       
@@ -123,7 +123,12 @@ const Shareride = () => {
             <h2 className="border-l-4 border-green-500 pl-5 leading-tight">Conclusion</h2>
          
             <p className="content-p">
-            Revamping the e-commerce website proved to be a game-changer in enhancing user experience and driving sales. By simplifying the navigation and checkout process, we created a more enjoyable shopping experience that significantly boosted conversion rates and customer satisfaction. This project highlights the critical role of UX design in the success of e-commerce platforms.
+
+The carpooling app presents a sustainable, efficient, and user-friendly solution to urban traffic congestion. By leveraging technology to connect commuters with similar routes, it not only reduces travel costs and commute time but also contributes to a greener environment by lowering carbon emissions.
+
+With features like real-time ride matching and seamless payments, the app encourages a shift from single-passenger commuting to shared mobility, fostering a more connected and eco-conscious society. By adopting this solution, cities can move towards less congested roads, reduced pollution, and a hassle-free commuting experience for all.
+
+
             </p>    
             
           </div>

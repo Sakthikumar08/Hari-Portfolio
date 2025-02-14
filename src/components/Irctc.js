@@ -437,17 +437,7 @@ visibility.”
 
           </div>
 
-          <div ref={(el) => (sectionRefs.current["Design Timeline (19-01-2024 to 28-01-2024)"] = el)} className="section">
-            <h2 className="border-l-4 border-green-500 pl-2 leading-tight">Design Timeline (19-01-2024 to 28-01-2024)</h2>
-       
-            <img 
-  src={irctc18} 
-  alt="irctc" 
-  className="hero-image" 
-  style={{ display: "block", margin: "0 auto" }} 
-/>
-
-          </div>
+          
           <div ref={(el) => (sectionRefs.current["User Research"] = el)} className="section">
             <h2 className="border-l-4 border-green-500 pl-2 leading-tight">User Research</h2>
             <p className="content-p">
@@ -857,7 +847,6 @@ process, combining convenience and choice on our user friendly platform.
             </li>
             </ul>
             <li className={activeSection === "Solution Statement" ? "active" : ""} onClick={() => scrollToSection("Solution Statement")}>Solution Statement</li>
-            <li className={activeSection === "Design Timeline (19-01-2024 to 28-01-2024)" ? "active" : ""} onClick={() => scrollToSection("Design Timeline (19-01-2024 to 28-01-2024)")}>Design Timeline (19-01-2024 to 28-01-2024)</li>
             <li className={activeSection === "User Research" ? "active" : ""} onClick={() => scrollToSection("User Research")}>User Research</li>
             <li className={activeSection === "Target Audience" ? "active" : ""} onClick={() => scrollToSection("Target Audience")}>Target Audience</li>
             <li className={activeSection === "Guerrilla Research" ? "active" : ""} onClick={() => scrollToSection("Guerrilla Research")}>Guerrilla Research</li>
